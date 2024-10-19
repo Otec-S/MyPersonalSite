@@ -1,0 +1,36 @@
+.headerTitle {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.headerSubTitle {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.text {
+  color: rgb(148 163 184);
+  margin-top: 1rem;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.socialMediaIcon svg {
+  width: 20px;
+  height: 20px;
+  fill: rgb(148 163 184);
+  transition: fill 0.3s ease;
+
+  &:hover {
+    fill: white;
+  }
+}
