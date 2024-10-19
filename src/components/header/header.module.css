@@ -28,9 +28,14 @@
   width: 20px;
   height: 20px;
   fill: rgb(148 163 184);
-  transition: fill 0.3s ease;
 
   &:hover {
     fill: white;
   }
+}
+
+.socialMediaIconMail svg {
+  width: 25px;
+  height: 25px;
+  padding-bottom: 3px;
 }
