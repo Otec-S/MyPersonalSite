@@ -1,0 +1,9 @@
+.navigation {
+  margin-top: 4rem;
+}
+
+.navigationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,21 @@
+.socialMedia {
+  display: flex;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.socialMediaIcon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-font-secondary);
+
+  &:hover {
+    fill: white;
+  }
+}
+
+.socialMediaIconMail svg {
+  width: 25px;
+  height: 25px;
+  padding-bottom: 3px;
+}

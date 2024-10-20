@@ -1,0 +1,42 @@
+.navigationItem {
+  margin: 0 0 1rem 0;
+}
+
+.navigationLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navigationIcon {
+  width: 2rem;
+  margin-right: 8px;
+  border: 1px solid var(--color-font-secondary);
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    width 0.2s;
+}
+
+.navigationLink:hover .navigationIcon {
+  color: var(--color-font-primary);
+}
+
+.navigationItem:hover .navigationIcon {
+  border-color: var(--color-background-primary);
+  background-color: var(--color-background-primary);
+  text-decoration: none;
+  width: 4rem;
+}
+
+.navigationText {
+  color: var(--color-font-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.navigationItem:hover .navigationText {
+  color: var(--color-font-primary);
+}
