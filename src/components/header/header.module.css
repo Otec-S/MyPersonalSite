@@ -1,3 +1,7 @@
+.header {
+  padding: 6rem 0;
+}
+
 .headerTitle {
   font-size: 3rem;
   line-height: 1;
@@ -19,36 +23,52 @@
 }
 
 .navigation {
-  /* Стили для навигации */
+  margin-top: 4rem;
 }
 
 .navigationList {
-  /* Стили для списка (например, выставление отступов, удаление маркеров) */
-  list-style: none; /* Удаляет маркеры списка */
-  padding: 0; /* Убирает внутренние отступы */
-  margin: 0; /* Убирает внешние отступы */
-}
-
-.navigationItem {
-  /* Стили для каждого элемента списка */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navigationLink {
-  /* Стили для ссылки (например, цвет, фон, убираем подчеркивание) */
-  text-decoration: none; /* Убирает подчеркивание */
-  color: inherit; /* Наследует цвет от родителя */
-  display: flex; /* Если хотите, чтобы текст и значок были выровнены по горизонтали */
-  align-items: center; /* Центрирование по вертикали */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .navigationIcon {
-  /* Стили для иконки */
-  margin-right: 8px; /* Отступ между иконкой и текстом */
-  /* При необходимости добавьте дополнительные стили */
+  width: 2rem;
+  margin-right: 8px;
+  border: 1px solid var(--color-font-secondary);
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    width 0.2s;
+}
+
+.navigationLink:hover .navigationIcon {
+  color: var(--color-font-primary);
+}
+
+.navigationItem:hover .navigationIcon {
+  border-color: var(--color-background-primary);
+  background-color: var(--color-background-primary);
+  text-decoration: none;
+  width: 4rem;
 }
 
 .navigationText {
-  /* Стили для текста в ссылке */
+  color: var(--color-font-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.navigationItem:hover .navigationText {
+  color: var(--color-font-primary);
 }
 
 .socialMedia {
@@ -60,7 +80,7 @@
 .socialMediaIcon svg {
   width: 20px;
   height: 20px;
-  fill: rgb(148 163 184);
+  fill: var(--color-font-secondary);
 
   &:hover {
     fill: white;

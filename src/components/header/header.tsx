@@ -9,8 +9,11 @@ import {
 
 const Header: FC = () => {
   return (
-    <header>
-      <h1 className={styles.headerTitle}>Сергей Григораш</h1>
+    <header className={styles.header}>
+      <h1 className={styles.headerTitle}>
+        Сергей <br />
+        Григораш
+      </h1>
       <h2 className={styles.headerSubTitle}>Frontend Developer</h2>
       <p className={styles.text}>Сделаем это красиво</p>
 
@@ -18,8 +21,8 @@ const Header: FC = () => {
         <ul className={styles.navigationList}>
           <li className={styles.navigationItem}>
             <a href="#" className={styles.navigationLink}>
-              <span className={styles.navigationIcon}>-----</span>
-              <span className={styles.navigationText}>Обо мне</span>
+              <span className={styles.navigationIcon}></span>
+              <span className={styles.navigationText}>ОБО МНЕ</span>
             </a>
           </li>
         </ul>
