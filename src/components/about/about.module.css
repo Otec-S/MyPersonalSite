@@ -1,0 +1,10 @@
+.about {
+  border: 1px solid greenyellow;
+  padding-top: 6rem;
+}
+
+.text {
+  color: var(--color-font-secondary);
+  line-height: 1.5;
+  /* margin-top: 1rem; */
+}
