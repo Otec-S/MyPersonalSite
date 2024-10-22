@@ -1,12 +1,12 @@
 .socialMedia {
   display: flex;
-  gap: 15px;
+  gap: 25px;
   margin-top: 2rem;
 }
 
 .socialMediaIcon svg {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   fill: var(--color-font-secondary);
 
   &:hover {
@@ -15,7 +15,7 @@
 }
 
 .socialMediaIconMail svg {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   padding-bottom: 3px;
 }

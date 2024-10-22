@@ -4,6 +4,7 @@
   --color-font-primary: #e5e7eb;
   --color-font-secondary: rgb(148 163 184);
   --color-background: #0f172a;
+  --color-link-hover: #4fd1c5;
 }
 
 body {
@@ -22,5 +23,4 @@ body {
   gap: 1rem;
   min-height: 100vh;
   padding: 0 6rem;
-  border: 1px solid green;
 }

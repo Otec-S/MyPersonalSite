@@ -2,22 +2,13 @@
   position: sticky;
   top: 0;
   display: flex;
-  max-height: 100vh; /* 100vh for full viewport height */
+  max-height: 100vh;
   width: 50%;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 6rem; /* 24 * 0.25rem, since 1rem = 16px */
-  padding-bottom: 6rem; /* 24 * 0.25rem */
-  border: 1px solid red;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
-
-/* .header {
-  padding: 6rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid red;
-} */
 
 .headerTitle {
   font-size: 3rem;

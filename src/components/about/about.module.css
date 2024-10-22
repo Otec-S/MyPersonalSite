@@ -1,10 +1,23 @@
 .about {
-  border: 1px solid greenyellow;
   padding-top: 6rem;
 }
 
 .text {
   color: var(--color-font-secondary);
   line-height: 1.5;
-  /* margin-top: 1rem; */
+  margin-bottom: 1rem;
+}
+
+.link {
+  font-weight: 700;
+  color: #e2e8f0;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+
+  &:focus {
+    color: var(--color-link-hover);
+  }
 }

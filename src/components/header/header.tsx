@@ -8,11 +8,10 @@ const Header: FC = () => {
   return (
     <header className={styles.header}>
       <div>
-        <h1 className={styles.headerTitle}>
-          Сергей <br />
-          Григораш
-        </h1>
-        <h2 className={styles.headerSubTitle}>Frontend Developer</h2>
+        <h1 className={styles.headerTitle}>Сергей Григораш</h1>
+        <h2 className={styles.headerSubTitle}>
+          Frontend Developer | React TypeScript
+        </h2>
         <p className={styles.text}>Сделаю это красиво</p>
         <Navigation />
       </div>
