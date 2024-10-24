@@ -1,0 +1,72 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.card:hover .activeCard {
+  position: absolute;
+  left: -1rem;
+  right: -1rem;
+  top: -0.625rem;
+  bottom: -0.625rem;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: rgb(68, 84, 122);
+    opacity: 0.2;
+  }
+}
+
+.header {
+  width: 30%;
+  color: var(--color-font-secondary);
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.body {
+  width: 70%;
+}
+
+.arrowLink svg {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.375;
+  margin-top: 0.25rem;
+  color: var(--color-font-primary);
+}
+
+.card:hover .title {
+  color: var(--color-link-hover);
+}
+
+.card:hover .arrowLink svg {
+  transform: translate(5px, -5px);
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-font-secondary);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
