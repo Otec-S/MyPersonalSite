@@ -19,7 +19,6 @@ const Card: FC<Props> = ({
   return (
     <div className={styles.card}>
       <span className={styles.activeCard}></span>
-
       <header className={styles.header}>{header}</header>
       <div className={styles.body}>
         <h3 className={styles.title}>

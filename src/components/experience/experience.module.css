@@ -14,3 +14,8 @@
 .listItem {
   margin-bottom: 3rem;
 }
+
+.listItem.fade {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}

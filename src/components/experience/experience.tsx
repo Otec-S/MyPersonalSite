@@ -1,10 +1,30 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import Card from "@components/card/card";
 import styles from "./experience.module.css";
 
 const Experience: FC = () => {
+  useEffect(() => {
+    const listItems = document.querySelectorAll(`.${styles.listItem}`);
+
+    listItems.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        listItems.forEach((el) => {
+          if (el !== item) {
+            (el as HTMLElement).classList.add(styles.fade);
+          }
+        });
+      });
+
+      item.addEventListener("mouseleave", () => {
+        listItems.forEach((el) => {
+          (el as HTMLElement).classList.remove(styles.fade);
+        });
+      });
+    });
+  }, []);
+
   return (
-    <section>
+    <section className={styles.experience}>
       <ul>
         <li className={styles.listItem}>
           <Card
@@ -42,7 +62,7 @@ const Experience: FC = () => {
                 включая бивалютные таблицы, линейные и круговые графики,
                 подписку клиентов на уведомления об изменениях финансовых
                 показателей конкурентов, аналитику продаж самого клиента,
-                внедрение i18n."
+                внедрение i18n.
               </>
             }
             stack={[
