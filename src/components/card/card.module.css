@@ -4,18 +4,19 @@
   position: relative;
 }
 
-.card:hover .activeCard {
+.activeCard {
   position: absolute;
   left: -1rem;
   right: -1rem;
   top: -0.625rem;
   bottom: -0.625rem;
   border-radius: 0.25rem;
+  z-index: -1;
+}
 
-  &:hover {
-    background-color: rgb(68, 84, 122);
-    opacity: 0.2;
-  }
+.card:hover .activeCard {
+  background-color: rgb(68, 84, 122);
+  opacity: 0.2;
 }
 
 .header {
@@ -43,7 +44,7 @@
 
 .title {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.375;
   margin-top: 0.25rem;
   color: var(--color-font-primary);

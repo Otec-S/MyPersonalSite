@@ -6,14 +6,20 @@ import StackItem from "@components/stack-item/stack-item";
 interface Props {
   header: string;
   title: string;
-  description: string;
-  stack?: string[];
+  description: ReactElement;
+  stack: string[];
 }
 
-const Card: FC<Props> = ({ header, title, description }): ReactElement => {
+const Card: FC<Props> = ({
+  header,
+  title,
+  description,
+  stack,
+}): ReactElement => {
   return (
     <div className={styles.card}>
       <span className={styles.activeCard}></span>
+
       <header className={styles.header}>{header}</header>
       <div className={styles.body}>
         <h3 className={styles.title}>
@@ -24,24 +30,11 @@ const Card: FC<Props> = ({ header, title, description }): ReactElement => {
         </h3>
         <p className={styles.description}>{description}</p>
         <ul className={styles.stack}>
-          <li>
-            <StackItem itemTitle="TypeScript" />
-          </li>
-          <li>
-            <StackItem itemTitle="React" />
-          </li>
-          <li>
-            <StackItem itemTitle="Redux" />
-          </li>
-          <li>
-            <StackItem itemTitle="Ant Design" />
-          </li>
-          <li>
-            <StackItem itemTitle="Recharts" />
-          </li>
-          <li>
-            <StackItem itemTitle="Jest" />
-          </li>
+          {stack.map((technology, index) => (
+            <li key={index}>
+              <StackItem itemTitle={technology} />
+            </li>
+          ))}
         </ul>
       </div>
     </div>
