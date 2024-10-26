@@ -127,7 +127,7 @@ const Experience: FC = () => {
                   aria-label="Site of Law Firm Adviser (opens in a new tab)"
                 >
                   корпоративный сайт компании
-                </a>{" "}
+                </a>
                 , провел SEO оптимизацию.
               </>
             }
