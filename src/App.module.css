@@ -9,6 +9,11 @@
   --color-link-hover: #4fd1c5;
 }
 
+::selection {
+  background-color: var(--color-link-hover);
+  color: var(--color-background);
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
