@@ -2,10 +2,12 @@
   margin: 0 0 2rem 0;
 
   &:hover,
-  &:focus-within {
+  &:visited,
+  &.active {
     .navigationIcon {
       border-color: var(--color-background-primary);
       background-color: var(--color-background-primary);
+      color: var(--color-font-primary);
       text-decoration: none;
       width: 4rem;
     }
@@ -33,6 +35,7 @@
   width: 2rem;
   margin-right: 8px;
   border: 1px solid var(--color-font-secondary);
+
   transition:
     background-color 0.2s,
     border-color 0.2s,
