@@ -24,7 +24,7 @@ const Experience: FC = () => {
   }, []);
 
   return (
-    <section className={styles.experience}>
+    <section className={styles.experience} id="experience">
       <ul>
         <li className={styles.listItem}>
           <Card

@@ -6,9 +6,8 @@ const Navigation: FC = () => {
   return (
     <nav className={styles.navigation}>
       <ul className={styles.navigationList}>
-        <NavigationItem link="#" text="Обо мне" />
-        <NavigationItem link="#" text="Опыт" />
-        <NavigationItem link="#" text="Проекты" />
+        <NavigationItem link="#about" text="Обо мне" />
+        <NavigationItem link="#experience" text="Опыт" />
       </ul>
     </nav>
   );

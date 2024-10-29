@@ -3,7 +3,7 @@ import styles from "./about.module.css";
 
 const About: FC = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       {/* TODO: заголовок?  */}
       <p className={styles.text}>
         Мой путь в IT начался еще в Физмат лицее, где я изучал основы
