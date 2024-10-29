@@ -1,11 +1,32 @@
 .navigationItem {
   margin: 0 0 2rem 0;
+
+  &:hover,
+  &:focus-within {
+    .navigationIcon {
+      border-color: var(--color-background-primary);
+      background-color: var(--color-background-primary);
+      text-decoration: none;
+      width: 4rem;
+    }
+
+    .navigationText {
+      color: var(--color-font-primary);
+    }
+  }
 }
 
 .navigationLink {
   text-decoration: none;
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    .navigationIcon {
+      color: var(--color-font-primary);
+    }
+  }
 }
 
 .navigationIcon {
@@ -18,25 +39,10 @@
     width 0.2s;
 }
 
-.navigationLink:hover .navigationIcon {
-  color: var(--color-font-primary);
-}
-
-.navigationItem:hover .navigationIcon {
-  border-color: var(--color-background-primary);
-  background-color: var(--color-background-primary);
-  text-decoration: none;
-  width: 4rem;
-}
-
 .navigationText {
   color: var(--color-font-secondary);
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1rem;
   letter-spacing: 0.1em;
-}
-
-.navigationItem:hover .navigationText {
-  color: var(--color-font-primary);
 }
