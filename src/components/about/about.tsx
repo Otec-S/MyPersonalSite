@@ -12,7 +12,7 @@ const About: FC = () => {
         программирования на{" "}
         <a
           className={styles.link}
-          href="https://ru.wikipedia.org/wiki/ZX_Spectrum"
+          href="https://en.wikipedia.org/wiki/ZX_Spectrum"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="ZX-Spectrum (opens in a new tab)"
@@ -62,8 +62,7 @@ const About: FC = () => {
         В свободное время играю в{" "}
         <a
           className={styles.link}
-          // FIXME: почему-то не работает такая ссылка
-          href="https://t.me/@BG_clubbot"
+          href="https://t.me/BG_clubbot"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Telegram bot (opens in a new tab)"
