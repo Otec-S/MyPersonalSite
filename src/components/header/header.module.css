@@ -14,6 +14,10 @@
     padding-top: 5rem;
     padding-bottom: 0px;
   }
+
+  @media (max-width: 768px) {
+    padding-top: 3rem;
+  }
 }
 
 .headerTitle {
@@ -21,6 +25,11 @@
   line-height: 1;
   font-weight: 700;
   letter-spacing: -0.025em;
+
+  @media (max-width: 640px) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 .headerSubTitle {
@@ -29,6 +38,11 @@
   font-weight: 500;
   margin-top: 0.75rem;
   letter-spacing: -0.025em;
+
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 .text {
