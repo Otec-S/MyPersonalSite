@@ -31,4 +31,10 @@ body {
   gap: 1rem;
   min-height: 100vh;
   padding: 0 6rem;
+  /* background-color: yellowgreen; */
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    padding: 0 3rem;
+  }
 }

@@ -2,6 +2,10 @@
   display: flex;
   gap: 25px;
   margin-top: 2rem;
+
+  @media (max-width: 1000px) {
+    gap: 15px;
+  }
 }
 
 .socialMediaIcon svg {

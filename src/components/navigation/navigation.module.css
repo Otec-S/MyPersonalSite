@@ -1,5 +1,9 @@
 .navigation {
   margin-top: 4rem;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .navigationList {
