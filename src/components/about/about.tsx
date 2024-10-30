@@ -3,7 +3,7 @@ import styles from "./about.module.css";
 
 const About: FC = () => {
   return (
-    <section className={styles.about} id="about">
+    <section className={styles.about} id="about" aria-label="About me">
       <div className={styles.titleWrapper}>
         <h2 className={styles.title}>Обо мне</h2>
       </div>

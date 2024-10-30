@@ -9,7 +9,7 @@ const Navigation: FC = () => {
   console.log("experience:", experience);
 
   return (
-    <nav className={styles.navigation}>
+    <nav className={styles.navigation} aria-label="In-page jump links">
       <ul className={styles.navigationList}>
         <NavigationItem link="#about" text="Обо мне" isActive={about} />
         <NavigationItem link="#experience" text="Опыт" isActive={experience} />

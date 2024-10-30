@@ -5,7 +5,7 @@ import Experience from "@components/experience/experience";
 
 const Main: FC = () => {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} aria-label="Main page">
       <About />
       <Experience />
     </main>

@@ -6,7 +6,11 @@ interface Props {
 }
 
 const StackItem: FC<Props> = ({ itemTitle }) => {
-  return <div className={styles.item}>{itemTitle}</div>;
+  return (
+    <div className={styles.item} aria-label="Technology used">
+      {itemTitle}
+    </div>
+  );
 };
 
 export default StackItem;

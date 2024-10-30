@@ -24,7 +24,11 @@ const Experience: FC = () => {
   }, []);
 
   return (
-    <section className={styles.experience} id="experience">
+    <section
+      className={styles.experience}
+      id="experience"
+      aria-label="Work experience"
+    >
       <div className={styles.titleWrapper}>
         <h2 className={styles.title}>Опыт</h2>
       </div>
@@ -116,7 +120,7 @@ const Experience: FC = () => {
                   href="https://emaktab.uz"
                   target="_blank"
                   rel="noreferrer noopener"
-                  aria-label="Site of Emaktab (opens in a new tab)"
+                  aria-label="Site of E-maktab (opens in a new tab)"
                 >
                   электронному школьному дневнику
                 </a>{" "}
