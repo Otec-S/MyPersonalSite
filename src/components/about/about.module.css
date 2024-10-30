@@ -3,6 +3,21 @@
   margin-bottom: 9rem;
 }
 
+.title {
+  color: var(--color-font-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+
 .text {
   color: var(--color-font-secondary);
   line-height: 1.5;
