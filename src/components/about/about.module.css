@@ -7,6 +7,23 @@
   }
 }
 
+.titleWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  width: 100vw;
+  background-color: var(--color-background-rgba);
+  padding: 1.25rem 1.5rem;
+  backdrop-filter: blur(10px);
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+
 .title {
   color: var(--color-font-primary);
   font-size: 0.875rem;
@@ -14,7 +31,7 @@
   line-height: 1.25rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: none;
 
   @media (max-width: 1000px) {

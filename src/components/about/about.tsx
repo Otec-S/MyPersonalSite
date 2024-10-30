@@ -4,7 +4,9 @@ import styles from "./about.module.css";
 const About: FC = () => {
   return (
     <section className={styles.about} id="about">
-      <h2 className={styles.title}>Обо мне</h2>
+      <div className={styles.titleWrapper}>
+        <h2 className={styles.title}>Обо мне</h2>
+      </div>
       <p className={styles.text}>
         Мой путь в IT начался еще в Физмат лицее, где я изучал основы
         программирования на{" "}

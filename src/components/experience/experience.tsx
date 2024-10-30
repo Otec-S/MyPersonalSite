@@ -25,7 +25,9 @@ const Experience: FC = () => {
 
   return (
     <section className={styles.experience} id="experience">
-      <h2 className={styles.title}>Опыт</h2>
+      <div className={styles.titleWrapper}>
+        <h2 className={styles.title}>Опыт</h2>
+      </div>
       <ul>
         <li className={styles.listItem}>
           <Card

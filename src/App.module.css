@@ -5,6 +5,7 @@
   --color-font-secondary: rgb(148 163 184);
   --color-font-tertiary: rgb(72, 191, 145);
   --color-background: #0f172a;
+  --color-background-rgba: rgb(15, 23, 42, 0.75);
   --color-background-secondary: rgba(72, 191, 145, 0.1);
   --color-link-hover: #4fd1c5;
   --color-gradient: rgba(29, 78, 216, 0.15);
