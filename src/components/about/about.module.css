@@ -13,12 +13,9 @@
   font-weight: 700;
   color: #e2e8f0;
   text-decoration: none;
+  transition: color 0.3s ease;
 
   &:hover {
-    color: var(--color-link-hover);
-  }
-
-  &:focus {
     color: var(--color-link-hover);
   }
 }

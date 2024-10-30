@@ -3,6 +3,7 @@
   color: #e2e8f0;
   text-decoration: none;
   z-index: 10;
+  transition: color 0.3s ease;
 
   &:hover {
     cursor: pointer;

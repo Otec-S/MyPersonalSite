@@ -8,6 +8,7 @@
   width: 25px;
   height: 25px;
   fill: var(--color-font-secondary);
+  transition: fill 0.3s ease;
 
   &:hover {
     fill: white;

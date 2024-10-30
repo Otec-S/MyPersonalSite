@@ -12,6 +12,9 @@
   bottom: -0.625rem;
   border-radius: 0.25rem;
   z-index: -1;
+  transition:
+    background-color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .card:hover .activeCard {
@@ -48,6 +51,7 @@
   line-height: 1.375;
   margin-top: 0.25rem;
   color: var(--color-font-primary);
+  transition: color 0.3s ease;
 }
 
 .card:hover .title {
