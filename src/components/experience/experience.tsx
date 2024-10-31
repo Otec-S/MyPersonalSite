@@ -4,23 +4,25 @@ import styles from "./experience.module.css";
 
 const Experience: FC = () => {
   useEffect(() => {
-    const listItems = document.querySelectorAll(`.${styles.listItem}`);
+    if (window.innerWidth >= 1000) {
+      const listItems = document.querySelectorAll(`.${styles.listItem}`);
 
-    listItems.forEach((item) => {
-      item.addEventListener("mouseenter", () => {
-        listItems.forEach((el) => {
-          if (el !== item) {
-            (el as HTMLElement).classList.add(styles.fade);
-          }
+      listItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          listItems.forEach((el) => {
+            if (el !== item) {
+              (el as HTMLElement).classList.add(styles.fade);
+            }
+          });
+        });
+
+        item.addEventListener("mouseleave", () => {
+          listItems.forEach((el) => {
+            (el as HTMLElement).classList.remove(styles.fade);
+          });
         });
       });
-
-      item.addEventListener("mouseleave", () => {
-        listItems.forEach((el) => {
-          (el as HTMLElement).classList.remove(styles.fade);
-        });
-      });
-    });
+    }
   }, []);
 
   return (
