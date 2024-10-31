@@ -1,51 +1,32 @@
-# React + TypeScript + Vite
+# Мой персональный сайт
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Фичи:
 
-Currently, two official plugins are available:
+- Круговой градиент следует за указателем. При разрешении менее 1000px положение градиента становится фиксированным.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- При нажатии на Имя осуществляется прокрутка блока Main на начало. Эта функция отключена при разрешении менее 1000px.
 
-## Expanding the ESLint configuration
+- Отзывчивый блок навигации - меняется при hover, а также отслеживает положение секций в Main для отображения активным соответствующего пункта навигации.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Кастомизация фона и цвета выделяемого текста на сайте (selected).
 
-- Configure the top-level `parserOptions` property like this:
+- При наведении указателя на любой раздел блока Опыт этоn раздел выделяется фоном и анимацией стрелки, а остальные блоки затемняются.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- При разрешении менее 1000px меняется отображение блоков, у секций из Main появляются видимые заголовки, которые реализованы как sticky, блок навигации скрывается.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Доступность приложения обеспечивается простановкой aria-labels
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# MyPersonalSite
+## Технологии и библиотеки проекта
+
+1. **React**на TypeScript
+2. **Vite** как сборщик
+3. **PostCSS** c autoprefixer
+4. **ModuleCSS**
+5. **Prettier**
+6. **Vite-plugin-svgr** для удобной работы с SVG
+
+---
+
+## Деплой на GH Pages
