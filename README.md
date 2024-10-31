@@ -29,6 +29,8 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" title="CSS" alt="CSS" width="40" height="40"/>&nbsp;
 </div>
 
+<br>
+
 1. **React** на TypeScript
 2. **Vite** как сборщик
 3. **PostCSS** c autoprefixer
