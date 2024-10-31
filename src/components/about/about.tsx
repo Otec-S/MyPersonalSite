@@ -59,7 +59,7 @@ const About: FC = () => {
         фронтендом. Сейчас специализируюсь на React и TypeScript.
       </p>
       <p className={styles.text}>
-        В свободное время играю в{" "}
+        В свободное время играю в современные настольные игры{" "}
         <a
           className={styles.link}
           href="https://t.me/BG_clubbot"
@@ -67,7 +67,7 @@ const About: FC = () => {
           rel="noreferrer noopener"
           aria-label="Telegram bot (opens in a new tab)"
         >
-          современные настольные игры
+          (мой инфо-бот)
         </a>
         , бегаю на длинные дистанции и путешествую.
       </p>
