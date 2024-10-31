@@ -11,6 +11,7 @@ export default defineConfig({
     }),
     react(),
   ],
+  base: "MyPersonalSite",
   resolve: {
     alias: {
       "@pages": path.resolve(__dirname, "src/pages"),
