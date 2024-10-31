@@ -10,7 +10,7 @@
 
 - Кастомизация фона и цвета выделяемого текста на сайте (selected).
 
-- При наведении указателя на любой раздел блока Опыт этоn раздел выделяется фоном и анимацией стрелки, а остальные блоки затемняются.
+- При наведении указателя на любой раздел блока Опыт этот раздел выделяется фоном и анимацией стрелки, а остальные блоки затемняются.
 
 - При разрешении менее 1000px меняется отображение блоков, у секций из Main появляются видимые заголовки, которые реализованы как sticky, блок навигации скрывается.
 
@@ -20,7 +20,16 @@
 
 ## Технологии и библиотеки проекта
 
-1. **React**на TypeScript
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TypeScrypt" alt="TypeScrypt" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/vitejs/vitejs-original.svg" title="Vite" alt="Vite" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/postcss/postcss-original.svg" title="PostCSS" alt="PostCSS" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML" alt="HTML" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" title="CSS" alt="CSS" width="40" height="40"/>&nbsp;
+</div>
+
+1. **React** на TypeScript
 2. **Vite** как сборщик
 3. **PostCSS** c autoprefixer
 4. **ModuleCSS**
