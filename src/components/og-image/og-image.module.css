@@ -1,0 +1,30 @@
+.og {
+  width: 1000px;
+  height: 600px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.name {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: var(--color-background-secondary);
+  padding: 2rem 3rem;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: var(--color-font-tertiary);
+  width: fit-content;
+}
