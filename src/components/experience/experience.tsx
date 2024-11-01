@@ -37,7 +37,7 @@ const Experience: FC = () => {
       <ul>
         <li className={styles.listItem}>
           <Card
-            header="2024 - по н.в."
+            header="01.2024 - по н.в."
             title="Frontend Developer - VILISOV COMPANY"
             description={
               <>
@@ -88,7 +88,7 @@ const Experience: FC = () => {
         </li>
         <li className={styles.listItem}>
           <Card
-            header="2024 - 2024"
+            header="08.2024 - 10.2024"
             title="Frontend Developer - BurnCode"
             description={
               <>
@@ -112,7 +112,7 @@ const Experience: FC = () => {
         </li>
         <li className={styles.listItem}>
           <Card
-            header="2023 - 2023"
+            header="01.2023 - 12.2023"
             title="Frontend Developer - EDUSENSE"
             description={
               <>
@@ -143,7 +143,7 @@ const Experience: FC = () => {
         </li>
         <li className={styles.listItem}>
           <Card
-            header="2021 - 2023"
+            header="06.2021 - 12.2022"
             title="Web Developer - Юридическая фирма 'Эдвайзер'"
             description={
               <>
