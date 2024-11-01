@@ -5,8 +5,6 @@ import useSectionVisibility from "@components/shared/hooks/useSectionVisibility"
 
 const Navigation: FC = () => {
   const { about, experience } = useSectionVisibility();
-  console.log("about:", about);
-  console.log("experience:", experience);
 
   return (
     <nav className={styles.navigation} aria-label="In-page jump links">

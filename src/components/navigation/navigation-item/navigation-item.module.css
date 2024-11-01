@@ -25,6 +25,7 @@
   align-items: center;
 
   &:hover,
+  &:visited,
   &:focus {
     .navigationIcon {
       color: var(--color-font-primary);
