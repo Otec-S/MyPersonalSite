@@ -52,3 +52,19 @@
   opacity: 0.3;
   transition: opacity 0.3s ease;
 }
+
+.arrowLink svg {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.CVtitle {
+  margin-bottom: 6rem;
+}
+
+.CVtitle:hover .arrowLink svg {
+  transform: translate(5px, -5px);
+}
