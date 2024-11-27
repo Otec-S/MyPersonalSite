@@ -1,6 +1,7 @@
 import { FC, useEffect } from "react";
 import Card from "@components/card/card";
 import styles from "./experience.module.css";
+import { ArrowLink } from "@assets/icons";
 
 const Experience: FC = () => {
   useEffect(() => {
@@ -26,11 +27,7 @@ const Experience: FC = () => {
   }, []);
 
   return (
-    <section
-      className={styles.experience}
-      id="experience"
-      aria-label="Work experience"
-    >
+    <section id="experience" aria-label="Work experience">
       <div className={styles.titleWrapper}>
         <h2 className={styles.title}>Опыт</h2>
       </div>
@@ -164,6 +161,20 @@ const Experience: FC = () => {
           />
         </li>
       </ul>
+      <a
+        className={styles.link}
+        href="https://drive.google.com/file/d/1llrzqbYOczDMTGBAQ-wUryjO0ITzmxgU/view?usp=sharing"
+        target="_blank"
+        rel="noreferrer noopener"
+        aria-label="CV"
+      >
+        <h3 className={styles.CVtitle}>
+          Полное резюме
+          <span className={styles.arrowLink}>
+            <ArrowLink />
+          </span>
+        </h3>
+      </a>
     </section>
   );
 };
