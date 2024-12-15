@@ -7,8 +7,8 @@ import SocialMedia from "@components/social-media/social-media";
 import { useTranslation, Trans } from "react-i18next";
 
 const lngs = {
-  en: { nativeName: "English" },
-  ru: { nativeName: "Russian" },
+  en: { nativeName: "ENG" },
+  ru: { nativeName: "RUS" },
 };
 
 const Header: FC = () => {
@@ -35,17 +35,23 @@ const Header: FC = () => {
   return (
     <header className={styles.header}>
       <div>
-        {Object.keys(lngs).map((lng) => (
-          <button
-            key={lng}
-            style={{
-              fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
-            }}
-            type="submit"
-            onClick={() => i18n.changeLanguage(lng)}
-          >
-            {lngs[lng].nativeName}
-          </button>
+        {(Object.keys(lngs) as Array<keyof typeof lngs>).map((lng, index) => (
+          <span key={lng}>
+            <button
+              className={
+                i18n.resolvedLanguage === lng
+                  ? `${styles.lngButton} ${styles.lngButtonActive}`
+                  : `${styles.lngButton}`
+              }
+              type="submit"
+              onClick={() => i18n.changeLanguage(lng)}
+            >
+              {lngs[lng].nativeName}
+            </button>
+            {index < Object.keys(lngs).length - 1 && (
+              <span className={styles.separator}> | </span>
+            )}
+          </span>
         ))}
       </div>
       <div>
