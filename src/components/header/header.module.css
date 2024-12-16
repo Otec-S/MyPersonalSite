@@ -60,19 +60,16 @@
 }
 
 .lngButton {
+  margin-bottom: 2rem;
   background-color: var(--color-bg-secondary);
   color: var(--color-font-primary);
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
 
   &:hover {
     color: var(--color-link-hover);
-  }
-
-  @media (max-width: 1000px) {
-    margin-bottom: 2rem;
   }
 }
 
