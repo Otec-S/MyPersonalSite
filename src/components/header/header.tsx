@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 import Navigation from "@components/navigation/navigation";
 import SocialMedia from "@components/social-media/social-media";
 
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const lngs = {
   en: { nativeName: "ENG" },
@@ -58,7 +58,8 @@ const Header: FC = () => {
         <h1 className={styles.headerTitle}>
           <a href={link} className={styles.headerTitleLink}>
             {/* TODO: */}
-            <Trans i18nKey="description.part1">Сергей Григораш</Trans>
+            {/* <Trans i18nKey="description.part1">Сергей Григораш</Trans> */}
+            {t("header.my-name")}
           </a>
         </h1>
         <h2 className={styles.headerSubTitle}>
@@ -67,7 +68,7 @@ const Header: FC = () => {
         <p className={styles.text}>
           {/* TODO: */}
           {/* Сделаю это красиво */}
-          {t("description.part2")}
+          {t("header.slogan")}
         </p>
         <Navigation />
       </div>

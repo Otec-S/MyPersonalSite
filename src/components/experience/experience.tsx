@@ -80,6 +80,7 @@ const Experience: FC = () => {
               "Jest",
               "React Router",
               "i18next",
+              "Docker",
             ]}
           />
         </li>
@@ -104,7 +105,7 @@ const Experience: FC = () => {
                 базу.
               </>
             }
-            stack={["TypeScript", "React", "RTK", "MUI"]}
+            stack={["TypeScript", "React", "RTK", "MUI", "Docker"]}
           />
         </li>
         <li className={styles.listItem}>
