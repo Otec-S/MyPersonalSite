@@ -57,19 +57,13 @@ const Header: FC = () => {
         </div>
         <h1 className={styles.headerTitle}>
           <a href={link} className={styles.headerTitleLink}>
-            {/* TODO: */}
-            {/* <Trans i18nKey="description.part1">Сергей Григораш</Trans> */}
             {t("header.my-name")}
           </a>
         </h1>
         <h2 className={styles.headerSubTitle}>
           Frontend Developer | React TypeScript
         </h2>
-        <p className={styles.text}>
-          {/* TODO: */}
-          {/* Сделаю это красиво */}
-          {t("header.slogan")}
-        </p>
+        <p className={styles.text}>{t("header.slogan")}</p>
         <Navigation />
       </div>
       <SocialMedia />
