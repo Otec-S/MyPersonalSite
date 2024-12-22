@@ -2,5 +2,9 @@
   "header": {
     "my-name": "Sergey Grigorash",
     "slogan": "I will make it beautiful"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience"
   }
 }
