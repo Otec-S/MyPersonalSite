@@ -1,15 +1,17 @@
 import { FC } from "react";
 import styles from "./about.module.css";
+import { useTranslation } from "react-i18next";
 
 const About: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.about} id="about" aria-label="About me">
       <div className={styles.titleWrapper}>
-        <h2 className={styles.title}>Обо мне</h2>
+        <h2 className={styles.title}>{t("about.hiddentitle")}</h2>
       </div>
       <p className={styles.text}>
-        Мой путь в IT начался еще в Физмат лицее, где я изучал основы
-        программирования на{" "}
+        {t("about.start")}{" "}
         <a
           className={styles.link}
           href="https://en.wikipedia.org/wiki/ZX_Spectrum"
@@ -17,12 +19,12 @@ const About: FC = () => {
           rel="noreferrer noopener"
           aria-label="ZX-Spectrum (opens in a new tab)"
         >
-          древнем ZX-Spectrum
-        </a>
-        . Кто-то еще помнит такой? :))
+          {t("about.ZXSpectrum")}
+        </a>{" "}
+        {t("about.remember")} :))
       </p>
       <p className={styles.text}>
-        После этого успел пройти и{" "}
+        {t("about.after")}{" "}
         <a
           className={styles.link}
           href="https://pll.harvard.edu/course/cs50-introduction-computer-science"
@@ -30,9 +32,9 @@ const About: FC = () => {
           rel="noreferrer noopener"
           aria-label="CS50 (opens in a new tab)"
         >
-          CS50 от Гарвардского университета
+          {t("about.CS50")}
         </a>
-        , и много курсов по{" "}
+        {t("about.courses")}{" "}
         <a
           className={styles.link}
           href="https://practicum.yandex.com/"
@@ -40,9 +42,9 @@ const About: FC = () => {
           rel="noreferrer noopener"
           aria-label="Yandex Practicum (opens in a new tab)"
         >
-          Web разработке
+          {t("about.else")}
         </a>
-        , фронту и даже{" "}
+        {t("about.frontend")}{" "}
         <a
           className={styles.link}
           href="https://coda.io/@metalamp/education/web3-frontend-28"
@@ -54,12 +56,9 @@ const About: FC = () => {
         </a>
         .
       </p>
+      <p className={styles.text}>{t("about.backend")}</p>
       <p className={styles.text}>
-        Есть опыт в backend (Express.js с MongoDB), но в основном занимаюсь
-        фронтендом. Сейчас специализируюсь на React и TypeScript.
-      </p>
-      <p className={styles.text}>
-        В свободное время играю в современные настольные игры{" "}
+        {t("about.hobbies")}{" "}
         <a
           className={styles.link}
           href="https://t.me/BG_clubbot"
@@ -67,11 +66,11 @@ const About: FC = () => {
           rel="noreferrer noopener"
           aria-label="Telegram bot (opens in a new tab)"
         >
-          (мой инфо-бот)
+          {t("about.bot")}
         </a>
-        , бегаю на длинные дистанции и путешествую.
+        {t("about.run")}{" "}
       </p>
-      <p className={styles.text}>Буду рад сделать что-то вместе с вами!</p>
+      <p className={styles.text}>{t("about.happy")}</p>
     </section>
   );
 };

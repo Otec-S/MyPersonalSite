@@ -6,5 +6,21 @@
   "nav": {
     "about": "About",
     "experience": "Experience"
+  },
+  "about": {
+    "hiddentitle": "About me",
+    "start": "My path in IT began in the Physics and Mathematics Lyceum, where I studied the basics of programming on ",
+    "ZXSpectrum": "ancient ZX-Spectrum.",
+    "remember": "Does anyone else remember this?",
+    "after": "After that, I managed to complete ",
+    "CS50": "CS50 from Harvard University, ",
+    "courses": "many courses on ",
+    "else": "Web development, ",
+    "frontend": "frontend, and even ",
+    "backend": "I have experience in backend (Express.js with MongoDB), but I mainly work on frontend. Currently I specialize in React and TypeScript.",
+    "hobbies": "In my free time, I play modern board games ",
+    "bot": "(my info-bot), ",
+    "run": "run long distances and travel.",
+    "happy": "I'd be happy to do something with you!"
   }
 }
