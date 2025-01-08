@@ -2,8 +2,12 @@ import { FC, useEffect } from "react";
 import Card from "@components/card/card";
 import styles from "./experience.module.css";
 import { ArrowLink } from "@assets/icons";
+import { useTranslation } from "react-i18next";
 
 const Experience: FC = () => {
+  const { t } = useTranslation();
+  const nbsp = "\u00A0";
+
   useEffect(() => {
     if (window.innerWidth >= 1000) {
       const listItems = document.querySelectorAll(`.${styles.listItem}`);
@@ -34,12 +38,11 @@ const Experience: FC = () => {
       <ul>
         <li className={styles.listItem}>
           <Card
-            header="янв&nbsp;2024 - по&nbsp;н.в."
+            header={`${t("experience.january")}${nbsp}2024 - ${t("experience.now")}`}
             title="Frontend Developer - VILISOV COMPANY"
             description={
               <>
-                Амбициозная компания из Тюмени создает два флагманских продукта:
-                электронное меню{" "}
+                {t("experience.Vilisov")}{" "}
                 <a
                   className={styles.link}
                   href="https://easyqr.online/"
@@ -49,12 +52,11 @@ const Experience: FC = () => {
                 >
                   EasyQR
                 </a>{" "}
-                для российских и международных клиентов из HoReCa и мощное
-                аналитическое приложение{" "}
+                {t("experience.EQ-customers")}{" "}
                 <span className={styles.link}>
-                  EasyAnalytics (проект временно заморожен)
+                  EasyAnalytics {t("experience.frozen")}
                 </span>{" "}
-                для продавцов на маркетплейсе{" "}
+                {t("experience.customers")}{" "}
                 <a
                   className={styles.link}
                   href="https://uzum.uz/ru"
@@ -64,11 +66,7 @@ const Experience: FC = () => {
                 >
                   Uzum
                 </a>{" "}
-                (Узбекистан). По обоим проектам я реализовал их frontend части,
-                включая бивалютные таблицы, линейные и круговые графики,
-                подписку клиентов на уведомления об изменениях финансовых
-                показателей конкурентов, аналитику продаж самого клиента,
-                внедрение i18n.
+                {t("experience.my-EA-role")}
               </>
             }
             stack={[
