@@ -84,7 +84,6 @@ const Experience: FC = () => {
         </li>
         <li className={styles.listItem}>
           <Card
-            // header="авг&nbsp;2024 - окт&nbsp;2024"
             header={`${t("experience.august")}${nbsp}2024 - ${t("experience.october")}${nbsp}2024`}
             title="Frontend Developer - BurnCode"
             description={
@@ -106,11 +105,11 @@ const Experience: FC = () => {
         </li>
         <li className={styles.listItem}>
           <Card
-            header="янв&nbsp;2023 - дек&nbsp;2023"
+            header={`${t("experience.january")}${nbsp}2023 - ${t("experience.december")}${nbsp}2023`}
             title="Frontend Developer - EDUSENSE"
             description={
               <>
-                Платное приложение к{" "}
+                {t("experience.paid-app")}
                 <a
                   className={styles.link}
                   href="https://emaktab.uz"
@@ -118,11 +117,9 @@ const Experience: FC = () => {
                   rel="noreferrer noopener"
                   aria-label="Site of E-maktab (opens in a new tab)"
                 >
-                  электронному школьному дневнику
+                  {t("experience.paid-app-link")}
                 </a>{" "}
-                для детального анализа успеваемости учащегося. Я помог коллегам
-                в разработке frontend-части, а также поработал с backend:
-                взаимодействие с БД MongoDB, настройка сервера Nginx.
+                {t("experience.edusense-description")}
               </>
             }
             stack={[

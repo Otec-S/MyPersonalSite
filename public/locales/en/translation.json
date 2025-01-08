@@ -35,6 +35,10 @@
     "august": "aug",
     "october": "oct",
     "burncode-link": "A code editor",
-    "burncode-description": " who helps HR and hiring managers recruit and test IT staff for the company. I helped the guys find and fix bugs in the program, and also improved the code base."
+    "burncode-description": " who helps HR and hiring managers recruit and test IT staff for the company. I helped the guys find and fix bugs in the program, and also improved the code base.",
+    "december": "dec",
+    "paid-app": "A paid application for ",
+    "paid-app-link": "an electronic school diary",
+    "edusense-description": " for a detailed analysis of a student's academic performance. I helped my colleagues in developing the frontend part, and also worked with the backend: interaction with the MongoDB database, setting up the Nginx server."
   }
 }
