@@ -84,7 +84,8 @@ const Experience: FC = () => {
         </li>
         <li className={styles.listItem}>
           <Card
-            header="авг&nbsp;2024 - окт&nbsp;2024"
+            // header="авг&nbsp;2024 - окт&nbsp;2024"
+            header={`${t("experience.august")}${nbsp}2024 - ${t("experience.october")}${nbsp}2024`}
             title="Frontend Developer - BurnCode"
             description={
               <>
@@ -95,12 +96,9 @@ const Experience: FC = () => {
                   rel="noreferrer noopener"
                   aria-label="Site of BurnCode (opens in a new tab)"
                 >
-                  Редактор кода
+                  {t("experience.burncode-link")}
                 </a>{" "}
-                , помогающий сотрудникам отдела HR и нанимающим менеджерам
-                подбирать и тестировать IT персонал в компанию. Я помог ребятам
-                с поиском и устранением багов программы, а также улучшил кодовую
-                базу.
+                {t("experience.burncode-description")}
               </>
             }
             stack={["TypeScript", "React", "RTK", "MUI", "Docker"]}

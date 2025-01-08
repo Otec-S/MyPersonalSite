@@ -31,6 +31,10 @@
     "EQ-customers": "for Russian and international clients from HoReCa and a powerful analytical application",
     "frozen": "(project is temporarily on hold)",
     "customers": "for sellers on the marketplace",
-    "my-EA-role": "(Uzbekistan). For both projects, I developed their frontend parts, including dual-currency tables, line and pie charts, client subscription to notifications about changes in competitors' financial performance, client sales analytics, i18n implementation."
+    "my-EA-role": "(Uzbekistan). For both projects, I developed their frontend parts, including dual-currency tables, line and pie charts, client subscription to notifications about changes in competitors' financial performance, client sales analytics, i18n implementation.",
+    "august": "aug",
+    "october": "oct",
+    "burncode-link": "A code editor",
+    "burncode-description": " who helps HR and hiring managers recruit and test IT staff for the company. I helped the guys find and fix bugs in the program, and also improved the code base."
   }
 }
