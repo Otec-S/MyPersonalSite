@@ -33,7 +33,7 @@ const Experience: FC = () => {
   return (
     <section id="experience" aria-label="Work experience">
       <div className={styles.titleWrapper}>
-        <h2 className={styles.title}>Опыт</h2>
+        <h2 className={styles.title}>{t("experience.experience")}</h2>
       </div>
       <ul>
         <li className={styles.listItem}>
