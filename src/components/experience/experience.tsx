@@ -134,11 +134,11 @@ const Experience: FC = () => {
         </li>
         <li className={styles.listItem}>
           <Card
-            header="март&nbsp;2021 - дек&nbsp;2022"
-            title="Web Developer - Юридическая фирма 'Эдвайзер'"
+            header={`${t("experience.march")}${nbsp}2021 - ${t("experience.december")}${nbsp}2022`}
+            title="Web Developer - Law Firm Adviser"
             description={
               <>
-                Создал и поддерживал{" "}
+                {t("experience.create-and-support")}{" "}
                 <a
                   className={styles.link}
                   href="https://www.adviser-spb.ru/"
@@ -146,9 +146,9 @@ const Experience: FC = () => {
                   rel="noreferrer noopener"
                   aria-label="Site of Law Firm Adviser (opens in a new tab)"
                 >
-                  корпоративный сайт компании
+                  {t("experience.corporate-site")}
                 </a>
-                , провел SEO оптимизацию.
+                {t("experience.SEO")}
               </>
             }
             stack={["HTML", "CSS", "BEM"]}

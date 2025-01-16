@@ -39,6 +39,10 @@
     "december": "dec",
     "paid-app": "A paid application for ",
     "paid-app-link": "an electronic school diary",
-    "edusense-description": " for a detailed analysis of a student's academic performance. I helped my colleagues in developing the frontend part, and also worked with the backend: interaction with the MongoDB database, setting up the Nginx server."
+    "edusense-description": " for a detailed analysis of a student's academic performance. I helped my colleagues in developing the frontend part, and also worked with the backend: interaction with the MongoDB database, setting up the Nginx server.",
+    "march": "mar",
+    "create-and-support": "Created and supported ",
+    "corporate-site": "the company's corporate website",
+    "SEO": ", conducted SEO optimization."
   }
 }
