@@ -163,7 +163,7 @@ const Experience: FC = () => {
         aria-label="CV"
       >
         <h3 className={styles.CVtitle}>
-          Полное резюме
+          {t("experience.full-CV")}
           <span className={styles.arrowLink}>
             <ArrowLink />
           </span>
