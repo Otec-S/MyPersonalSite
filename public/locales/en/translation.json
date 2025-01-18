@@ -9,19 +9,22 @@
   },
   "about": {
     "hiddentitle": "About me",
-    "start": "My path in IT began in the Physics and Mathematics Lyceum, where I studied the basics of programming on ",
-    "ZXSpectrum": "ancient ZX-Spectrum.",
+    "start": "My interest in IT began while attending a Physics and Mathematics Lyceum, where I learned the basics of programming on ",
+    "ZXSpectrum": "an ancient ZX-Spectrum.",
     "remember": "Does anyone else remember this?",
-    "after": "After that, I managed to complete ",
-    "CS50": "CS50 from Harvard University, ",
-    "courses": "many courses on ",
+    "after": "I have successfully completed  ",
+    "CS50": "the CS50 course from Harvard University, ",
+    "courses": "as well as several courses in ",
     "else": "Web development, ",
-    "frontend": "frontend, and even ",
-    "backend": "I have experience in backend (Express.js with MongoDB), but I mainly work on frontend. Currently I specialize in React and TypeScript.",
-    "hobbies": "In my free time, I play modern board games ",
+    "frontend": "frontend development, and even for ",
+
+    "backend": "Although I have experience in backend development using Express.js with MongoDB, I am particularly passionate about frontend development. I am currently specializing in and have experience with React and TypeScript.",
+
+    "hobbies": "In my personal time, I am passionate about modern board games ",
     "bot": "(my info-bot), ",
-    "run": "run long distances and travel.",
-    "happy": "I'd be happy to do something with you!"
+    "run": "running long distances, and traveling the world.",
+
+    "happy": "It would be a pleasure to get involved in your projects and assist by applying all the knowledge and experience I have to find proper solutions!"
   },
   "experience": {
     "experience": "experience",

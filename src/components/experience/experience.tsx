@@ -5,7 +5,8 @@ import { ArrowLink } from "@assets/icons";
 import { useTranslation } from "react-i18next";
 
 const Experience: FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const nbsp = "\u00A0";
 
   useEffect(() => {
@@ -157,7 +158,11 @@ const Experience: FC = () => {
       </ul>
       <a
         className={styles.link}
-        href="https://drive.google.com/file/d/1llrzqbYOczDMTGBAQ-wUryjO0ITzmxgU/view?usp=sharing"
+        href={
+          currentLanguage === "ru"
+            ? "https://drive.google.com/file/d/1llrzqbYOczDMTGBAQ-wUryjO0ITzmxgU/view?usp=sharing"
+            : "https://drive.google.com/file/d/1U6KYfGETxMM7a9PHjhrz7o1UA7eGfc5F/view?usp=sharing"
+        }
         target="_blank"
         rel="noreferrer noopener"
         aria-label="CV"
