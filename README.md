@@ -40,4 +40,4 @@
 
 ---
 
-## Деплой на GH Pages
+## [Деплой на GH Pages](https://otec-s.github.io/MyPersonalSite/)
