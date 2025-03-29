@@ -39,7 +39,49 @@ const Experience: FC = () => {
       <ul>
         <li className={styles.listItem}>
           <Card
-            header={`${t("experience.january")}${nbsp}2024 - ${t("experience.now")}`}
+            header={`${t("experience.january")}${nbsp}2025 - ${t("experience.now")}`}
+            title="Fullstack Developer - ROCKET TECH SCHOOL"
+            description={
+              <>
+                <a
+                  className={styles.link}
+                  href="https://www.rts.school/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Site of RTS (opens in a new tab)"
+                >
+                  {t("experience.RTS")}
+                </a>{" "}
+                {t("experience.RTS-description")}{" "}
+                {t("experience.my-RTS-role")}{" "}
+                <a
+                  className={styles.link}
+                  href="https://space.rts.school/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="RTS platform (opens in a new tab)"
+                >
+                  {t("experience.RTS-platform")}
+                </a>{" "}
+                {t("experience.RTS-my-experience")}{" "}
+              </>
+            }
+            stack={[
+              "TypeScript",
+              "React",
+              "RTK Query",
+              "Next.js",
+              "Nest.js",
+              "i18next",
+              "Less",
+              "WebRTC",
+              "Ant Design",
+            ]}
+          />
+        </li>
+        <li className={styles.listItem}>
+          <Card
+            header={`${t("experience.january")}${nbsp}2024 - ${t("experience.december")}${nbsp}2024`}
             title="Frontend Developer - VILISOV COMPANY"
             description={
               <>

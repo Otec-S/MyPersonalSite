@@ -48,6 +48,11 @@
     "create-and-support": "Created and supported ",
     "corporate-site": "the company's corporate website",
     "SEO": ", conducted SEO optimization.",
-    "full-CV": "View Full Résumé"
+    "full-CV": "View Full Résumé",
+    "RTS" : "An international online school",
+    "RTS-description" : "of programming and digital creativity for kids aged 5–17.",
+    "my-RTS-role" : "I’m working on",
+    "RTS-platform" : "the multilingual educational platform.",
+    "RTS-my-experience" : "Frontend stack: React, TypeScript, Next.js, RTK Query, Less. Maintaining and extending a custom UI Kit built on top of Ant Design. Integrated i18next to support 4 languages. On the backend: NestJS, with video conferencing implemented via WebRTC."
   }
 }
