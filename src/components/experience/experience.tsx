@@ -39,7 +39,50 @@ const Experience: FC = () => {
       <ul>
         <li className={styles.listItem}>
           <Card
-            header={`${t("experience.january")}${nbsp}2025 - ${t("experience.now")}`}
+            header={`${t("experience.july")}${nbsp}2025 - ${t("experience.now")}`}
+            title="L2 Middle Developer - EPAM SYSTEMS"
+            description={
+              <>
+                <a
+                  className={styles.link}
+                  href="https://www.epam.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Site of EPAM SYSTEMS (opens in a new tab)"
+                >
+                  EPAM Systems, Inc.
+                </a>{" "}
+                {t("experience.EPAM-description")}{" "}
+
+                {t("experience.AMCH-experience")}{" "}
+                <a
+                  className={styles.link}
+                  href="https://payloadcms.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Payload CMS site (opens in a new tab)"
+                >
+                  CMS Payload
+                </a>{" "}
+                {t("experience.other-EPAM-experience")}{" "}
+              </>
+            }
+            stack={[
+              "TypeScript",
+              "React",
+              "Next.js",
+              "Github Copilot",
+              "Jira",
+              "CMS",
+              "GraphQL",
+              "TanStack Query",
+              "Tailwind CSS",
+            ]}
+          />
+        </li>
+        <li className={styles.listItem}>
+          <Card
+            header={`${t("experience.january")}${nbsp}2025 - ${t("experience.july")}${nbsp}2025`}
             title="Fullstack Developer - ROCKET TECH SCHOOL"
             description={
               <>
