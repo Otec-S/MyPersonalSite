@@ -5,7 +5,13 @@
   },
   "nav": {
     "about": "About",
-    "experience": "Experience"
+    "experience": "Experience",
+    "certificates": "Certificates"
+  },
+  "certificates": {
+    "title": "certificates",
+    "close": "Close",
+    "viewPdf": "Open PDF"
   },
   "about": {
     "hiddentitle": "About me",

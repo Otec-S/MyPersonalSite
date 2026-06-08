@@ -5,7 +5,13 @@
   },
   "nav": {
     "about": "Обо мне",
-    "experience": "Опыт"
+    "experience": "Опыт",
+    "certificates": "Сертификаты"
+  },
+  "certificates": {
+    "title": "сертификаты",
+    "close": "Закрыть",
+    "viewPdf": "Открыть PDF"
   },
 
   "about": {
