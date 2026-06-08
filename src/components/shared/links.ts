@@ -1,6 +1,6 @@
 export const RESUME_LINKS = {
-  ru: "https://drive.google.com/file/d/1llrzqbYOczDMTGBAQ-wUryjO0ITzmxgU/view?usp=sharing",
-  en: "https://drive.google.com/file/d/1U6KYfGETxMM7a9PHjhrz7o1UA7eGfc5F/view?usp=sharing",
+  ru: "https://drive.google.com/file/d/1d2LNEm_ceYx8w2capcz8ncsKpiKosc3G/view?usp=sharing",
+  en: "https://drive.google.com/file/d/1FgeIhpgQryFuHxw1VffD_4WdfSqymeEf/view?usp=sharing",
 } as const;
 
 export const SOCIAL_LINKS = {
