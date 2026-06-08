@@ -1,10 +1,6 @@
 .certificates {
-  padding-top: 6rem;
-  margin-bottom: 9rem;
-
-  @media (max-width: 1000px) {
-    margin-bottom: 6rem;
-  }
+  padding-top: 3rem;
+  margin-bottom: 6rem;
 }
 
 .titleWrapper {
