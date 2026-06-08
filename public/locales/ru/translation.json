@@ -10,8 +10,7 @@
   },
   "certificates": {
     "title": "сертификаты",
-    "close": "Закрыть",
-    "viewPdf": "Открыть PDF"
+    "close": "Закрыть"
   },
 
   "about": {

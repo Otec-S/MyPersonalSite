@@ -51,37 +51,3 @@
   height: 280px;
   object-fit: cover;
 }
-
-.pdfPreview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  height: 280px;
-  padding: 1.5rem;
-  background-color: rgba(148, 163, 184, 0.08);
-}
-
-.pdfIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 0.75rem;
-  background-color: var(--color-background-secondary);
-  color: var(--color-font-tertiary);
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-.title {
-  color: var(--color-font-primary);
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.4;
-  text-align: center;
-}

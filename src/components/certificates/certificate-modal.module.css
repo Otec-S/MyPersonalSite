@@ -29,15 +29,6 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.pdfFrame {
-  width: 100%;
-  height: 90vh;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #fff;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
-
 .closeButton {
   position: fixed;
   top: 1.5rem;

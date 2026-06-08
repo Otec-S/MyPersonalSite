@@ -10,8 +10,7 @@
   },
   "certificates": {
     "title": "certificates",
-    "close": "Close",
-    "viewPdf": "Open PDF"
+    "close": "Close"
   },
   "about": {
     "hiddentitle": "About me",

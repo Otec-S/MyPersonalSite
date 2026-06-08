@@ -50,19 +50,11 @@ const CertificateModal: FC<CertificateModalProps> = ({ certificate, onClose }) =
         ×
       </button>
       <div className={styles.content}>
-        {certificate.type === "image" ? (
-          <img
-            className={styles.image}
-            src={certificate.url}
-            alt={certificate.title}
-          />
-        ) : (
-          <iframe
-            className={styles.pdfFrame}
-            src={certificate.url}
-            title={certificate.title}
-          />
-        )}
+        <img
+          className={styles.image}
+          src={certificate.url}
+          alt={certificate.title}
+        />
       </div>
     </div>
   );

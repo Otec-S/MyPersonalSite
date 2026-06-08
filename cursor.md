@@ -27,10 +27,15 @@ npm run preview  # предпросмотр production-сборки
 ```
 src/
   components/          # UI-компоненты (каждый в своей папке)
+    about/
+    experience/
+    certificates/      # карусель сертификатов + модальное окно
     shared/
       constants.ts
-      hooks/           # переиспользуемые хуки
-  assets/icons/        # SVG-иконки + index.ts для реэкспорта
+      hooks/           # переиспользуемые хуки (useSectionVisibility)
+  assets/
+    icons/             # SVG-иконки + index.ts для реэкспорта
+    certificates/      # изображения сертификатов (.png, .jpg, .jpeg, .webp)
   utils/i18n/          # конфигурация i18next
   styles/reset.css
   App.tsx, main.tsx
@@ -73,7 +78,7 @@ public/locales/
 - Все пользовательские тексты — через `useTranslation()` и ключи в `public/locales/{lng}/translation.json`
 - Fallback-язык: `en`
 - При добавлении текста обновляй **оба** файла локализации (`ru` и `en`)
-- Ключи группируются по секциям: `header`, `nav`, `about`, `experience` и т.д.
+- Ключи группируются по секциям: `header`, `nav`, `about`, `experience`, `certificates` и т.д.
 
 ### SVG-иконки
 
@@ -85,7 +90,7 @@ public/locales/
 
 - У интерактивных и смысловых блоков — `aria-label`
 - Внешние ссылки: `target="_blank"` + `rel="noreferrer noopener"` + описательный `aria-label`
-- Секции с `id` для якорной навигации (`#about`, `#experience`)
+- Секции с `id` для якорной навигации (`#about`, `#experience`, `#certificates`)
 
 ## Ключевые фичи (не ломать без явного запроса)
 
@@ -94,6 +99,16 @@ public/locales/
 - На экранах < 1000px навигация скрыта, у секций появляются sticky-заголовки
 - Клик по имени в header прокручивает к Main (только ≥ 1000px)
 - Hover-эффекты в блоке Experience: подсветка активного раздела, затемнение остальных
+- **Сертификаты** — горизонтальная карусель (CSS scroll-snap) в конце страницы; клик открывает полноэкранное модальное окно с изображением
+- Раздел и пункт навигации скрываются, если в `src/assets/certificates/` нет файлов
+
+## Сертификаты
+
+- Изображения кладутся в `src/assets/certificates/` (`.png`, `.jpg`, `.jpeg`, `.webp`)
+- Автоподхват через `import.meta.glob` в `certificates.data.ts` — ручная регистрация не нужна
+- Заголовок карточки формируется из имени файла: `claude-101.webp` → «Claude 101»
+- Компоненты: `certificates.tsx`, `certificate-carousel.tsx`, `certificate-modal.tsx`
+- PDF не поддерживается — только изображения
 
 ## Деплой
 
