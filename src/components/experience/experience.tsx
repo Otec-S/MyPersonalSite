@@ -2,6 +2,7 @@ import { FC, useEffect } from "react";
 import Card from "@components/card/card";
 import styles from "./experience.module.css";
 import { ArrowLink } from "@assets/icons";
+import { RESUME_LINKS } from "@components/shared/links";
 import { useTranslation } from "react-i18next";
 
 const Experience: FC = () => {
@@ -243,11 +244,7 @@ const Experience: FC = () => {
       </ul>
       <a
         className={styles.link}
-        href={
-          currentLanguage === "ru"
-            ? "https://drive.google.com/file/d/1llrzqbYOczDMTGBAQ-wUryjO0ITzmxgU/view?usp=sharing"
-            : "https://drive.google.com/file/d/1U6KYfGETxMM7a9PHjhrz7o1UA7eGfc5F/view?usp=sharing"
-        }
+        href={RESUME_LINKS[currentLanguage === "ru" ? "ru" : "en"]}
         target="_blank"
         rel="noreferrer noopener"
         aria-label="CV"
