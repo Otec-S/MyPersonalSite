@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import svgr from "vite-plugin-svgr";
 
+const isRootBuild = process.env.VITE_BUILD_TARGET === "root";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -11,7 +13,10 @@ export default defineConfig({
     }),
     react(),
   ],
-  base: "MyPersonalSite/",
+  base: isRootBuild ? "/" : "/MyPersonalSite/",
+  build: {
+    outDir: isRootBuild ? "dist2" : "dist",
+  },
   resolve: {
     alias: {
       "@pages": path.resolve(__dirname, "src/pages"),

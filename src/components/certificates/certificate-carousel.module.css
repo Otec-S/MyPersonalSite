@@ -4,7 +4,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding-top: 2px;
+  padding-top: 6px;
   padding-bottom: 0.5rem;
   scrollbar-width: thin;
   scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
@@ -21,6 +21,15 @@
     background-color: rgba(148, 163, 184, 0.4);
     border-radius: 9999px;
   }
+
+  @media (min-width: 768px) {
+    &:has(.item:hover) .item:not(:hover) {
+      opacity: 0.3;
+      transform: none;
+      box-shadow: none;
+      border-color: rgba(148, 163, 184, 0.2);
+    }
+  }
 }
 
 .item {
@@ -33,7 +42,11 @@
   padding: 0;
   cursor: pointer;
   overflow: hidden;
-  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   &:hover {
     border-color: var(--color-link-hover);
