@@ -44,12 +44,16 @@
   }
 }
 
-.listItem {
-  margin-bottom: 3rem;
+.list {
+  @media (min-width: 1000px) {
+    &:has(.listItem:hover) .listItem:not(:hover) {
+      opacity: 0.3;
+    }
+  }
 }
 
-.listItem.fade {
-  opacity: 0.3;
+.listItem {
+  margin-bottom: 3rem;
   transition: opacity 0.3s ease;
 }
 

@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import Card from "@components/card/card";
 import styles from "./experience.module.css";
 import { ArrowLink } from "@assets/icons";
@@ -10,34 +10,12 @@ const Experience: FC = () => {
   const currentLanguage = i18n.language;
   const nbsp = "\u00A0";
 
-  useEffect(() => {
-    if (window.innerWidth >= 1000) {
-      const listItems = document.querySelectorAll(`.${styles.listItem}`);
-
-      listItems.forEach((item) => {
-        item.addEventListener("mouseenter", () => {
-          listItems.forEach((el) => {
-            if (el !== item) {
-              (el as HTMLElement).classList.add(styles.fade);
-            }
-          });
-        });
-
-        item.addEventListener("mouseleave", () => {
-          listItems.forEach((el) => {
-            (el as HTMLElement).classList.remove(styles.fade);
-          });
-        });
-      });
-    }
-  }, []);
-
   return (
     <section id="experience" aria-label="Work experience">
       <div className={styles.titleWrapper}>
         <h2 className={styles.title}>{t("experience.experience")}</h2>
       </div>
-      <ul>
+      <ul className={styles.list}>
         <li className={styles.listItem}>
           <Card
             header={`${t("experience.july")}${nbsp}2025 - ${t("experience.now")}`}
