@@ -1,7 +1,9 @@
-import { FC, useEffect } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Certificate } from "./certificates.data";
 import styles from "./certificate-modal.module.css";
+
+const ANIMATION_DURATION_MS = 300;
 
 interface CertificateModalProps {
   certificate: Certificate;
@@ -10,11 +12,34 @@ interface CertificateModalProps {
 
 const CertificateModal: FC<CertificateModalProps> = ({ certificate, onClose }) => {
   const { t } = useTranslation();
+  const [isClosing, setIsClosing] = useState(false);
+  const isClosingRef = useRef(false);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
+
+  const handleClose = useCallback(() => {
+    if (isClosingRef.current) {
+      return;
+    }
+
+    isClosingRef.current = true;
+    setIsClosing(true);
+    closeTimeoutRef.current = setTimeout(() => {
+      onClose();
+    }, ANIMATION_DURATION_MS);
+  }, [onClose]);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        onClose();
+        handleClose();
       }
     };
 
@@ -25,17 +50,17 @@ const CertificateModal: FC<CertificateModalProps> = ({ certificate, onClose }) =
       document.body.style.overflow = "";
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [onClose]);
+  }, [handleClose]);
 
   const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
-      onClose();
+      handleClose();
     }
   };
 
   return (
     <div
-      className={styles.overlay}
+      className={`${styles.overlay} ${isClosing ? styles.closing : ""}`}
       role="dialog"
       aria-modal="true"
       aria-label={certificate.title}
@@ -44,7 +69,7 @@ const CertificateModal: FC<CertificateModalProps> = ({ certificate, onClose }) =
       <button
         type="button"
         className={styles.closeButton}
-        onClick={onClose}
+        onClick={handleClose}
         aria-label={t("certificates.close")}
       >
         ×
