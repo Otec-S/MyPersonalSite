@@ -45,7 +45,11 @@
 }
 
 .list {
-  @media (min-width: 1000px) {
+  @media (min-width: 768px) and (max-width: 1000px) {
+    padding-top: 0.625rem;
+  }
+
+  @media (min-width: 768px) {
     &:has(.listItem:hover) .listItem:not(:hover) {
       opacity: 0.3;
     }
