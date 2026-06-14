@@ -16,6 +16,10 @@
   color: var(--color-background);
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
