@@ -19,7 +19,7 @@ const Experience: FC = () => {
         <li className={styles.listItem}>
           <Card
             header={`${t("experience.july")}${nbsp}2025 - ${t("experience.now")}`}
-            title="L2 Middle Developer - EPAM SYSTEMS"
+            title="AI-Driven Software Engineer - EPAM SYSTEMS"
             description={
               <>
                 <a
@@ -50,7 +50,9 @@ const Experience: FC = () => {
               "TypeScript",
               "React",
               "Next.js",
-              "Github Copilot",
+              "Copilot",
+              "Cursor",
+              "Claude Code",
               "Jira",
               "CMS",
               "GraphQL",

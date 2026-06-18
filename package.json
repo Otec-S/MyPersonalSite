@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:dist2": "tsc -b && VITE_BUILD_TARGET=root vite build",
+    "build:dist2": "tsc -b && VITE_BUILD_TARGET=root VITE_SITE_URL=https://sergeygrigorash.com vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "preview:dist2": "vite preview --outDir dist2"
