@@ -38,7 +38,6 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./dist2/
-          # Root folder of the site on reg.ru. Common values:
-          # ./public_html/  or  ./www/  or  ./domains/example.com/public_html/
-          server-dir: ./public_html/
+          # Document root for sergeygrigorash.com in ISPmanager: /www/sergeygrigorash.com
+          server-dir: ./www/sergeygrigorash.com/
           dangerous-clean-slate: false
