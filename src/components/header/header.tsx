@@ -61,7 +61,7 @@ const Header: FC = () => {
           </a>
         </h1>
         <h2 className={styles.headerSubTitle}>
-          Frontend Developer | React TypeScript
+          Software Engineer | AI TypeScript
         </h2>
         <p className={styles.text}>{t("header.slogan")}</p>
         <Navigation />
