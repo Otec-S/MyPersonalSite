@@ -91,7 +91,7 @@ useEffect(() => {
       // Desktop behavior
     }
   };
-  
+
   handleResize(); // Run on mount
   window.addEventListener("resize", handleResize);
   return () => window.removeEventListener("resize", handleResize);
