@@ -21,7 +21,7 @@
   background-color: rgb(68, 84, 122);
   opacity: 0.2;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 767px) {
     background-color: inherit;
     opacity: 1;
   }

@@ -5,6 +5,7 @@ import {
   MailIcon,
   TelegramIcon,
 } from "@assets/icons";
+import { SOCIAL_LINKS } from "@components/shared/links";
 import styles from "./social-media.module.css";
 
 const SocialMedia: FC = () => {
@@ -12,7 +13,7 @@ const SocialMedia: FC = () => {
     <ul className={styles.socialMedia} aria-label="Social media">
       <li className={styles.socialMediaIcon}>
         <a
-          href="https://github.com/Otec-S"
+          href={SOCIAL_LINKS.github}
           target="_blank"
           rel="noreferrer noopener"
           aria-label="GitHub (opens in a new tab)"
@@ -23,7 +24,7 @@ const SocialMedia: FC = () => {
       </li>
       <li className={styles.socialMediaIcon}>
         <a
-          href="http://www.linkedin.com/in/sergey-grigorash"
+          href={SOCIAL_LINKS.linkedin}
           target="_blank"
           rel="noreferrer noopener"
           aria-label="LinkedIn (opens in a new tab)"
@@ -34,7 +35,7 @@ const SocialMedia: FC = () => {
       </li>
       <li className={styles.socialMediaIcon}>
         <a
-          href="https://t.me/Otec_S"
+          href={SOCIAL_LINKS.telegram}
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Telegram (opens in a new tab)"
@@ -45,7 +46,7 @@ const SocialMedia: FC = () => {
       </li>
       <li className={`${styles.socialMediaIcon} ${styles.socialMediaIconMail}`}>
         <a
-          href="mailto:sergey.adviser@gmail.com"
+          href={SOCIAL_LINKS.email}
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Email (opens in a new tab)"

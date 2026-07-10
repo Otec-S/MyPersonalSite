@@ -1,7 +1,8 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import Card from "@components/card/card";
 import styles from "./experience.module.css";
 import { ArrowLink } from "@assets/icons";
+import { RESUME_LINKS } from "@components/shared/links";
 import { useTranslation } from "react-i18next";
 
 const Experience: FC = () => {
@@ -9,38 +10,16 @@ const Experience: FC = () => {
   const currentLanguage = i18n.language;
   const nbsp = "\u00A0";
 
-  useEffect(() => {
-    if (window.innerWidth >= 1000) {
-      const listItems = document.querySelectorAll(`.${styles.listItem}`);
-
-      listItems.forEach((item) => {
-        item.addEventListener("mouseenter", () => {
-          listItems.forEach((el) => {
-            if (el !== item) {
-              (el as HTMLElement).classList.add(styles.fade);
-            }
-          });
-        });
-
-        item.addEventListener("mouseleave", () => {
-          listItems.forEach((el) => {
-            (el as HTMLElement).classList.remove(styles.fade);
-          });
-        });
-      });
-    }
-  }, []);
-
   return (
     <section id="experience" aria-label="Work experience">
       <div className={styles.titleWrapper}>
         <h2 className={styles.title}>{t("experience.experience")}</h2>
       </div>
-      <ul>
+      <ul className={styles.list}>
         <li className={styles.listItem}>
           <Card
             header={`${t("experience.july")}${nbsp}2025 - ${t("experience.now")}`}
-            title="L2 Middle Developer - EPAM SYSTEMS"
+            title="AI-Driven Software Engineer - EPAM SYSTEMS"
             description={
               <>
                 <a
@@ -71,7 +50,9 @@ const Experience: FC = () => {
               "TypeScript",
               "React",
               "Next.js",
-              "Github Copilot",
+              "Copilot",
+              "Cursor",
+              "Claude Code",
               "Jira",
               "CMS",
               "GraphQL",
@@ -243,11 +224,7 @@ const Experience: FC = () => {
       </ul>
       <a
         className={styles.link}
-        href={
-          currentLanguage === "ru"
-            ? "https://drive.google.com/file/d/1llrzqbYOczDMTGBAQ-wUryjO0ITzmxgU/view?usp=sharing"
-            : "https://drive.google.com/file/d/1U6KYfGETxMM7a9PHjhrz7o1UA7eGfc5F/view?usp=sharing"
-        }
+        href={RESUME_LINKS[currentLanguage === "ru" ? "ru" : "en"]}
         target="_blank"
         rel="noreferrer noopener"
         aria-label="CV"
