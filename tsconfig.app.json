@@ -21,7 +21,6 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Alias */
-    "baseUrl": ".",
     "paths": {
       "@pages/*": ["./src/pages/*"],
       "@assets/*": ["./src/assets/*"],
