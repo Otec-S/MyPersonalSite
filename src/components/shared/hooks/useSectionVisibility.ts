@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 interface SectionVisibility {
   about: boolean;
   experience: boolean;
+  "private-projects": boolean;
   certificates: boolean;
 }
 
@@ -11,6 +12,7 @@ const useSectionVisibility = () => {
     {
       about: false,
       experience: false,
+      "private-projects": false,
       certificates: false,
     }
   );
@@ -21,6 +23,7 @@ const useSectionVisibility = () => {
         const newSectionVisibility: SectionVisibility = {
           about: false,
           experience: false,
+          "private-projects": false,
           certificates: false,
         };
 
@@ -37,7 +40,7 @@ const useSectionVisibility = () => {
     );
 
     const sections = document.querySelectorAll<HTMLElement>(
-      "[id^='about'], [id^='experience'], [id^='certificates']"
+      "[id^='about'], [id^='experience'], [id^='private-projects'], [id^='certificates']"
     );
     sections.forEach((section) => observer.observe(section));
 

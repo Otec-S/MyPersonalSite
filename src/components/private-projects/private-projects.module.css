@@ -1,0 +1,52 @@
+.privateProjects {
+  padding-top: 3rem;
+}
+
+.titleWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  width: 100vw;
+  background-color: var(--color-background-rgba);
+  padding: 1.25rem 1.5rem;
+  backdrop-filter: blur(10px);
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+
+.title {
+  color: var(--color-font-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+
+.list {
+  @media (min-width: 768px) and (max-width: 1000px) {
+    padding-top: 0.625rem;
+  }
+
+  @media (min-width: 768px) {
+    &:has(.listItem:hover) .listItem:not(:hover) {
+      opacity: 0.3;
+    }
+  }
+}
+
+.listItem {
+  margin-bottom: 3rem;
+  transition: opacity 0.3s ease;
+}

@@ -6,11 +6,21 @@
   "nav": {
     "about": "About",
     "experience": "Experience",
+    "private-projects": "Pet Projects",
     "certificates": "Certificates"
   },
   "certificates": {
     "title": "certificates",
     "close": "Close"
+  },
+  "privateProjects": {
+    "title": "pet projects",
+    "label": "Pet project",
+    "live": "live demo",
+    "source": "Source code",
+    "screenshots": "Screenshots",
+    "calorie-description": "A calorie diary PWA: estimates calories and macros of a meal from a photo or a text description using the Claude API. Entries are stored locally on the device; the app installs on a phone like a native one. A minimal Express proxy keeps the API key on the server. Deployed on a VPS (nginx + PM2) with a site-wide login.",
+    "files-description": "A personal Dropbox-style file service for my family. The NestJS backend issues presigned S3 URLs, so files travel between the browser and S3 directly and are never proxied through the API; PostgreSQL keeps metadata only. JWT auth with refresh-token rotation, per-user storage quotas, i18n, allowlist-only registration."
   },
   "about": {
     "hiddentitle": "About me",

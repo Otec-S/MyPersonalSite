@@ -6,8 +6,12 @@ import { certificates } from "@components/certificates/certificates.data";
 import { useTranslation } from "react-i18next";
 
 const Navigation: FC = () => {
-  const { about, experience, certificates: certificatesVisible } =
-    useSectionVisibility();
+  const {
+    about,
+    experience,
+    "private-projects": privateProjectsVisible,
+    certificates: certificatesVisible,
+  } = useSectionVisibility();
 
   const { t } = useTranslation();
   const hasCertificates = certificates.length > 0;
@@ -20,6 +24,11 @@ const Navigation: FC = () => {
           link="#experience"
           text={t("nav.experience")}
           isActive={experience}
+        />
+        <NavigationItem
+          link="#private-projects"
+          text={t("nav.private-projects")}
+          isActive={privateProjectsVisible}
         />
         {hasCertificates && (
           <NavigationItem
