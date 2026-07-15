@@ -52,7 +52,7 @@ Object.entries(imageModules)
 export const projects: Project[] = [
   {
     id: "calorie-tracker",
-    title: "Calorie Tracker",
+    title: "AI Calorie Tracker",
     descriptionKey: "privateProjects.calorie-description",
     stack: [
       "TypeScript",
@@ -70,7 +70,7 @@ export const projects: Project[] = [
   },
   {
     id: "files-service",
-    title: "Files Service",
+    title: "Family File Service",
     descriptionKey: "privateProjects.files-description",
     stack: [
       "TypeScript",
