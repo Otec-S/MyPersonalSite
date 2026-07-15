@@ -50,13 +50,14 @@ const useSectionVisibility = () => {
         // the viewport centre, so activate it explicitly.
         activeId = sections[sections.length - 1].id;
       } else {
-        // Active section is the last one whose top has passed the vertical
-        // centre of the viewport — matches the previous centre-line feel while
-        // keeping the first section active at the very top.
-        const centreLine = window.innerHeight / 2;
+        // Active section is the last one whose top has passed the activation
+        // line. The line sits in the upper quarter of the viewport (not the
+        // centre) so that a first section shorter than half the screen — e.g.
+        // the Russian "about" text — still stays active at the very top.
+        const activationLine = window.innerHeight / 4;
         activeId = sections[0].id;
         for (const { id, el } of sections) {
-          if (el.getBoundingClientRect().top <= centreLine) {
+          if (el.getBoundingClientRect().top <= activationLine) {
             activeId = id;
           }
         }
