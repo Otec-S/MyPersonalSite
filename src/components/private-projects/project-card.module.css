@@ -64,11 +64,11 @@
   transition: color 0.3s ease;
 }
 
-.titleLink:hover {
+.card:hover .titleLink {
   color: var(--color-link-hover);
 }
 
-.titleLink:hover .arrowLink svg {
+.card:hover .arrowLink svg {
   transform: translate(5px, -5px);
 }
 
