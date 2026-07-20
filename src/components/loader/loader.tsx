@@ -1,4 +1,5 @@
 import styles from "./loader.module.css";
+import favicon from "./favicon-data-uri";
 
 function Loader() {
   return (
@@ -22,9 +23,11 @@ function Loader() {
             strokeWidth="3"
           />
         </svg>
-        <span className={styles.monogram} aria-hidden="true">
-          SG
-        </span>
+        <span
+          className={styles.logo}
+          style={{ maskImage: `url(${favicon})`, WebkitMaskImage: `url(${favicon})` }}
+          aria-hidden="true"
+        />
       </div>
       <span className={styles.srOnly}>Loading…</span>
     </div>

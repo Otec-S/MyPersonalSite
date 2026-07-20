@@ -13,8 +13,8 @@
   position: relative;
   display: grid;
   place-items: center;
-  width: clamp(5rem, 12vw, 8rem);
-  height: clamp(5rem, 12vw, 8rem);
+  width: clamp(10rem, 24vw, 16rem);
+  height: clamp(10rem, 24vw, 16rem);
 }
 
 .spinner {
@@ -32,17 +32,20 @@
   stroke-linecap: round;
   stroke-dasharray: 110;
   stroke-dashoffset: 80;
-  filter: drop-shadow(0 0 6px var(--color-link-hover));
   transform-origin: center;
 }
 
-.monogram {
+.logo {
   position: absolute;
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 700;
-  font-size: clamp(1rem, 2.2vw, 1.5rem);
-  letter-spacing: 0.05em;
-  color: var(--color-font-primary);
+  width: clamp(4rem, 10vw, 7rem);
+  height: clamp(4rem, 10vw, 7rem);
+  background-color: var(--color-link-hover);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
   animation: pulse 1.4s ease-in-out infinite;
 }
 
@@ -88,7 +91,7 @@
     animation: none;
   }
 
-  .monogram {
+  .logo {
     animation: none;
   }
 }
