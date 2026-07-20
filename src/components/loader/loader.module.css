@@ -1,0 +1,94 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.spinnerWrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(5rem, 12vw, 8rem);
+  height: clamp(5rem, 12vw, 8rem);
+}
+
+.spinner {
+  width: 100%;
+  height: 100%;
+  animation: rotate 1.4s linear infinite;
+}
+
+.spinnerTrack {
+  stroke: var(--color-background-secondary);
+}
+
+.spinnerArc {
+  stroke: var(--color-link-hover);
+  stroke-linecap: round;
+  stroke-dasharray: 110;
+  stroke-dashoffset: 80;
+  filter: drop-shadow(0 0 6px var(--color-link-hover));
+  transform-origin: center;
+}
+
+.monogram {
+  position: absolute;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  letter-spacing: 0.05em;
+  color: var(--color-font-primary);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+
+  .monogram {
+    animation: none;
+  }
+}
