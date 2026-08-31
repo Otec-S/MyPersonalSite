@@ -36,28 +36,26 @@ const Experience: FC = () => {
                 {t("experience.AMCH-experience")}{" "}
                 <a
                   className={styles.link}
-                  href="https://payloadcms.com/"
+                  href="https://amcham.me"
                   target="_blank"
                   rel="noreferrer noopener"
-                  aria-label="Payload CMS site (opens in a new tab)"
+                  aria-label="Site of AMCHAM (opens in a new tab)"
                 >
-                  CMS Payload
-                </a>{" "}
+                  amcham.me
+                </a>
                 {t("experience.other-EPAM-experience")}{" "}
               </>
             }
             stack={[
+              "AI",
               "TypeScript",
               "React",
+              "Node.js",
               "Next.js",
-              "Copilot",
-              "Cursor",
-              "Claude Code",
-              "Jira",
-              "CMS",
-              "GraphQL",
-              "TanStack Query",
-              "Tailwind CSS",
+              "Payload CMS",
+              "TanStack",
+              "Tailwind",
+              "SCSS",
             ]}
           />
         </li>

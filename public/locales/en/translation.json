@@ -71,7 +71,7 @@
     "RTS-platform" : "the multilingual educational platform.",
     "RTS-my-experience" : "Frontend stack: React, TypeScript, Next.js, RTK Query, Less. Maintaining and extending a custom UI Kit built on top of Ant Design. Integrated i18next to support 4 languages. On the backend: NestJS, with video conferencing implemented via WebRTC.",
     "EPAM-description" : "is an international public IT company (S&P 500) specializing in software engineering, digital transformation, and AI consulting for global corporations, with over 61,200 employees across 55 countries.",
-    "AMCH-experience" : "I develop frontend parts of web applications in international distributed teams. I created a corporate website using Next.js with the headless ",
-     "other-EPAM-experience" : " for managing multilingual content, and developed a user interface to optimize business processes in the oil and gas industry. Utilized modern technologies to successfully implement responsive interfaces, complex forms, and API integrations."
+    "AMCH-experience" : "I design and implement custom AI skills, MCP servers, and subagents that automate repetitive and time-intensive tasks, enabling faster delivery and reducing manual effort for client teams. I also built a multilingual headless CMS platform that empowers content teams to manage pages, events, and publishing workflows without developer involvement (",
+     "other-EPAM-experience" : "). I deliver scalable web applications for enterprise clients across the oil & gas and business domains."
   }
 }
