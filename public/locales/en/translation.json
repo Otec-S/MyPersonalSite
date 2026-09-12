@@ -1,7 +1,8 @@
 {
   "header": {
     "my-name": "Sergey Grigorash",
-    "slogan": "I will make it beautiful"
+    "slogan": "I build product web apps and bring AI tools into the development process.",
+    "location": "📍 Samarkand, Uzbekistan (UTC+5) · remote / relocation · English B2+"
   },
   "nav": {
     "about": "About",
@@ -24,22 +25,13 @@
   },
   "about": {
     "hiddentitle": "About me",
-    "start": "My interest in IT began while attending a Physics and Mathematics Lyceum, where I learned the basics of programming on ",
-    "ZXSpectrum": "an ancient ZX-Spectrum.",
-    "remember": "Does anyone else remember this?",
-    "after": "I have successfully completed  ",
-    "CS50": "the CS50 course from Harvard University, ",
-    "courses": "as well as several courses in ",
-    "else": "Web development, ",
-    "frontend": "frontend development, and even for ",
-
-    "backend": "Although I have experience in backend development using Express.js with MongoDB, I am particularly passionate about frontend development. I am currently specializing in and have experience with React and TypeScript.",
-
-    "hobbies": "In my personal time, I am passionate about modern board games ",
-    "bot": "(my info-bot), ",
-    "run": "running long distances, and traveling the world.",
-
-    "happy": "It would be a pleasure to get involved in your projects and assist by applying all the knowledge and experience I have to find proper solutions!"
+    "intro": "Full-stack engineer: React and TypeScript on the front end, Node.js, MongoDB, and PostgreSQL on the back end. Four years in product development — educational platforms, marketplace analytics, corporate websites, HoReCa.",
+    "epam": "For the past year at EPAM Systems, I've combined development work with the role of AI Champion. I make sure AI tools actually work for the team: setting up AI agent environments for specific projects — MCP servers, rules and context for code assistants — running webinars, and advising on embedding AI into the development lifecycle. Certified by Anthropic, OpenAI, and Microsoft.",
+    "start": "I didn't come to IT right away, though I started programming back in a physics-and-math lyceum on a ",
+    "ZXSpectrum": "ZX Spectrum",
+    "remember": " — anyone else remember those? :)",
+    "hobbies": "Hobbies: modern board games, tennis, and travel.",
+    "happy": "Open to remote work and relocation. English — B2+, experience working in distributed international teams."
   },
   "experience": {
     "july": "july",
@@ -70,8 +62,11 @@
     "my-RTS-role" : "I’m working on",
     "RTS-platform" : "the multilingual educational platform.",
     "RTS-my-experience" : "Frontend stack: React, TypeScript, Next.js, RTK Query, Less. Maintaining and extending a custom UI Kit built on top of Ant Design. Integrated i18next to support 4 languages. On the backend: NestJS, with video conferencing implemented via WebRTC.",
-    "EPAM-description" : "is an international public IT company (S&P 500) specializing in software engineering, digital transformation, and AI consulting for global corporations, with over 61,200 employees across 55 countries.",
-    "AMCH-experience" : "I design and implement custom AI skills, MCP servers, and subagents that automate repetitive and time-intensive tasks, enabling faster delivery and reducing manual effort for client teams. I also built a multilingual headless CMS platform that empowers content teams to manage pages, events, and publishing workflows without developer involvement (",
-     "other-EPAM-experience" : "). I deliver scalable web applications for enterprise clients across the oil & gas and business domains."
+    "epam-intro": "Full-stack developer in distributed international teams; concurrently serving as AI Champion for the unit.",
+    "epam-bullet-cms-start": "Built a corporate website from scratch on Next.js + Payload CMS with multilingual content \u2014 ",
+    "epam-bullet-cms-end": "; cut editors\u2019 content-publishing time by 3x.",
+    "epam-bullet-rag": "Developed an internal tool for an industrial client: an AI-assistant interface on top of a RAG service, featuring response streaming, source links with highlighted excerpts, conversation history, and user rating of responses. Separately handled resilience \u2014 request cancellation, retries, and timeout handling for long-running responses. Built an interactive map of the client\u2019s facilities with point clustering, filters, and division cards populated from API data. Integrated with 4 of the client\u2019s services.",
+    "epam-bullet-ai-tools": "Rolled out Cursor and Claude Code into the client\u2019s development cycle: configured MCP servers and an AI environment for the team\u2019s codebase, and automated routine developer work \u2014 transferring new components from Figma to code via an MCP server, bumping app versions, and scaffolding new features from project templates. Cut time spent on routine tasks by 4x.",
+    "epam-bullet-webinars": "Ran 6 webinars for nearly 100 engineers and advise team leads on embedding AI into the SDLC."
   }
 }

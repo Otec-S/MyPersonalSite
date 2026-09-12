@@ -22,28 +22,25 @@ const Experience: FC = () => {
             title="AI-Driven Software Engineer - EPAM SYSTEMS"
             description={
               <>
-                <a
-                  className={styles.link}
-                  href="https://www.epam.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Site of EPAM SYSTEMS (opens in a new tab)"
-                >
-                  EPAM Systems, Inc.
-                </a>{" "}
-                {t("experience.EPAM-description")}{" "}
-
-                {t("experience.AMCH-experience")}{" "}
-                <a
-                  className={styles.link}
-                  href="https://amcham.me"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Site of AMCHAM (opens in a new tab)"
-                >
-                  amcham.me
-                </a>
-                {t("experience.other-EPAM-experience")}{" "}
+                <p className={styles.text}>{t("experience.epam-intro")}</p>
+                <ul className={styles.bulletList}>
+                  <li>
+                    {t("experience.epam-bullet-cms-start")}
+                    <a
+                      className={styles.link}
+                      href="https://amcham.me"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Site of AMCHAM (opens in a new tab)"
+                    >
+                      amcham.me
+                    </a>
+                    {t("experience.epam-bullet-cms-end")}
+                  </li>
+                  <li>{t("experience.epam-bullet-rag")}</li>
+                  <li>{t("experience.epam-bullet-ai-tools")}</li>
+                  <li>{t("experience.epam-bullet-webinars")}</li>
+                </ul>
               </>
             }
             stack={[

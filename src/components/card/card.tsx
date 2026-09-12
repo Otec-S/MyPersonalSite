@@ -27,7 +27,7 @@ const Card: FC<Props> = ({
             <ArrowLink />
           </span>
         </h3>
-        <p className={styles.description}>{description}</p>
+        <div className={styles.description}>{description}</div>
         <ul className={styles.stack}>
           {stack.map((technology, index) => (
             <li key={index}>

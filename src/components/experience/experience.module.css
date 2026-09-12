@@ -44,6 +44,24 @@
   }
 }
 
+.text {
+  margin: 0;
+}
+
+.bulletList {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.bulletList li {
+  margin-bottom: 0.5rem;
+}
+
+.bulletList li:last-child {
+  margin-bottom: 0;
+}
+
 .list {
   @media (min-width: 768px) and (max-width: 1000px) {
     padding-top: 0.625rem;

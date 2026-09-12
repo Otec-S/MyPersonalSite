@@ -61,9 +61,10 @@ const Header: FC = () => {
           </a>
         </h1>
         <h2 className={styles.headerSubTitle}>
-          Software Engineer | AI MERN
+          AI Driven Fullstack Engineer — React · TypeScript · Node.js
         </h2>
         <p className={styles.text}>{t("header.slogan")}</p>
+        <p className={styles.location}>{t("header.location")}</p>
         <Navigation />
       </div>
       <SocialMedia />

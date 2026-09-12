@@ -57,6 +57,20 @@
 .text {
   color: rgb(148 163 184);
   margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.location {
+  color: rgb(148 163 184);
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .lngButton {
