@@ -18,13 +18,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.2.0",
-    "react-router-dom": "^6.27.0",
     "vite-plugin-svgr": "^5.2.0"
   },
   "overrides": {
     "minimatch@3.1.5": {
       "brace-expansion": "^1.1.16"
-    }
+    },
+    "browserslist": "^4.28.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
