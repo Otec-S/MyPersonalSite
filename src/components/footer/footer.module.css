@@ -3,3 +3,21 @@
   justify-content: center;
   padding: 2rem 0 3rem;
 }
+
+.text {
+  color: var(--color-font-secondary);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.link {
+  font-weight: 700;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+}
