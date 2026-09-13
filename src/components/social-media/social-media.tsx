@@ -18,6 +18,7 @@ const SocialMedia: FC = () => {
           rel="noreferrer noopener"
           aria-label="GitHub (opens in a new tab)"
           title="GitHub"
+          data-umami-event="contact-click-github"
         >
           <GitHubIcon />
         </a>
@@ -29,6 +30,7 @@ const SocialMedia: FC = () => {
           rel="noreferrer noopener"
           aria-label="LinkedIn (opens in a new tab)"
           title="LinkedIn"
+          data-umami-event="contact-click-linkedin"
         >
           <LinkedInIcon />
         </a>
@@ -40,6 +42,7 @@ const SocialMedia: FC = () => {
           rel="noreferrer noopener"
           aria-label="Telegram (opens in a new tab)"
           title="Telegram"
+          data-umami-event="contact-click-telegram"
         >
           <TelegramIcon />
         </a>
@@ -51,6 +54,7 @@ const SocialMedia: FC = () => {
           rel="noreferrer noopener"
           aria-label="Email (opens in a new tab)"
           title="Email"
+          data-umami-event="contact-click-email"
         >
           <MailIcon />
         </a>

@@ -19,12 +19,11 @@ const CertificateCarousel: FC<CertificateCarouselProps> = ({
           type="button"
           className={styles.item}
           onClick={() => onSelect(certificate)}
-          aria-label={certificate.title}
         >
           <img
             className={styles.imagePreview}
             src={certificate.url}
-            alt=""
+            alt={certificate.title}
             loading="lazy"
           />
         </button>

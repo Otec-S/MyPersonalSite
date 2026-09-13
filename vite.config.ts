@@ -16,13 +16,21 @@ const siteUrl = (
 
 const ogImage = new URL(`${base}SG-FD.png`.replace(/\/+/g, "/"), siteUrl).href;
 
+// Umami website id is public (visible in every page's source), so it's fine
+// to keep it here rather than plumbing it through an env var.
+const UMAMI_WEBSITE_ID = "22976432-ef86-4343-ade9-317a46fc02e3";
+const umamiScriptTag = isRootBuild
+  ? `<script defer src="https://cloud.umami.is/script.js" data-website-id="${UMAMI_WEBSITE_ID}"></script>\n  </head>`
+  : "</head>";
+
 function htmlMetaPlugin(): Plugin {
   return {
     name: "html-meta",
     transformIndexHtml(html) {
       return html
         .replaceAll("__SITE_URL__", siteUrl)
-        .replaceAll("__OG_IMAGE__", ogImage);
+        .replaceAll("__OG_IMAGE__", ogImage)
+        .replace("</head>", umamiScriptTag);
     },
   };
 }

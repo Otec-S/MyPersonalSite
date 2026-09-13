@@ -59,12 +59,11 @@ const ProjectCard: FC<Props> = ({ project }) => {
                   type="button"
                   className={styles.screenshotButton}
                   onClick={() => setSelectedScreenshot(screenshot)}
-                  aria-label={screenshot.title}
                 >
                   <img
                     className={styles.imagePreview}
                     src={screenshot.url}
-                    alt=""
+                    alt={screenshot.title}
                     loading="lazy"
                   />
                 </button>
