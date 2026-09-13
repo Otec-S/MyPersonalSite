@@ -1,6 +1,7 @@
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import fs from "fs";
 import svgr from "vite-plugin-svgr";
 
 const isRootBuild = process.env.VITE_BUILD_TARGET === "root";
@@ -26,6 +27,25 @@ function htmlMetaPlugin(): Plugin {
   };
 }
 
+// public/robots.txt and public/sitemap.xml are copied verbatim by Vite (they
+// don't go through transformIndexHtml), so substitute their __SITE_URL__
+// placeholder after the bundle is written.
+function staticMetaPlugin(): Plugin {
+  return {
+    name: "static-meta",
+    closeBundle() {
+      const outDir = isRootBuild ? "dist2" : "dist";
+      for (const file of ["robots.txt", "sitemap.xml"]) {
+        const filePath = path.resolve(__dirname, outDir, file);
+        if (fs.existsSync(filePath)) {
+          const content = fs.readFileSync(filePath, "utf-8");
+          fs.writeFileSync(filePath, content.replaceAll("__SITE_URL__", siteUrl));
+        }
+      }
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -34,6 +54,7 @@ export default defineConfig({
     }),
     react(),
     htmlMetaPlugin(),
+    staticMetaPlugin(),
   ],
   base,
   build: {
