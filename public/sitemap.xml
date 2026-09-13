@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>__SITE_URL__</loc>
+    <loc>__SITE_URL__en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="__SITE_URL__en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="__SITE_URL__ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="__SITE_URL__en/" />
+  </url>
+  <url>
+    <loc>__SITE_URL__ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="__SITE_URL__en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="__SITE_URL__ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="__SITE_URL__en/" />
   </url>
 </urlset>

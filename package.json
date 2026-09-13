@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/prerender.mjs --outDir dist --base /MyPersonalSite/",
-    "build:dist2": "tsc -b && VITE_BUILD_TARGET=root VITE_SITE_URL=https://sergeygrigorash.com vite build && node scripts/prerender.mjs --outDir dist2 --base /",
+    "build": "tsc -b && vite build && node scripts/prerender.mjs --outDir dist --base /MyPersonalSite/ --siteUrl https://otec-s.github.io/MyPersonalSite/",
+    "build:dist2": "tsc -b && VITE_BUILD_TARGET=root VITE_SITE_URL=https://sergeygrigorash.com vite build && node scripts/prerender.mjs --outDir dist2 --base / --siteUrl https://sergeygrigorash.com/",
     "lint": "eslint .",
     "preview": "vite preview",
     "preview:dist2": "vite preview --outDir dist2"

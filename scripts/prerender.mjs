@@ -3,7 +3,7 @@
 // Real users still get the interactive app: main.tsx keeps using createRoot,
 // which re-renders over this static markup once JS loads.
 import { createServer } from "node:http";
-import { readFile, writeFile, stat } from "node:fs/promises";
+import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import puppeteer from "puppeteer";
@@ -22,14 +22,18 @@ function parseArgs(argv) {
   return args;
 }
 
-const { outDir, base } = parseArgs(process.argv.slice(2));
-if (!outDir || !base) {
-  console.error("Usage: node scripts/prerender.mjs --outDir <dist|dist2> --base </path/>");
+const { outDir, base, siteUrl } = parseArgs(process.argv.slice(2));
+if (!outDir || !base || !siteUrl) {
+  console.error(
+    "Usage: node scripts/prerender.mjs --outDir <dist|dist2> --base </path/> --siteUrl <https://...//>"
+  );
   process.exit(1);
 }
 
 const distPath = path.resolve(root, outDir);
 const normalizedBase = base.endsWith("/") ? base : `${base}/`;
+const normalizedSiteUrl = siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`;
+const ruUrl = `${normalizedSiteUrl}ru/`;
 
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -86,33 +90,67 @@ function startServer(rootDir, urlBase) {
   });
 }
 
+async function waitForReady(page) {
+  // Wait for the i18next-suspended Loader (role="status") to disappear,
+  // i.e. translations have loaded and the real content has mounted.
+  await page.waitForSelector('[role="status"]', { hidden: true, timeout: 30000 });
+  // Extra safety: make sure real heading content is present.
+  await page.waitForFunction(
+    () => {
+      const heading = document.querySelector("h1, h2");
+      return !!heading && heading.textContent.trim().length > 0;
+    },
+    { timeout: 30000 }
+  );
+}
+
+async function writeSnapshot(destPath, html) {
+  await mkdir(path.dirname(destPath), { recursive: true });
+  await writeFile(destPath, `<!doctype html>\n${html}`, "utf-8");
+  console.log(`[prerender] Snapshot written to ${destPath}`);
+}
+
 async function main() {
   const { server, port } = await startServer(distPath, normalizedBase);
-  const url = `http://127.0.0.1:${port}${normalizedBase}?lng=en`;
 
   const browser = await puppeteer.launch({ headless: "new" });
   try {
     const page = await browser.newPage();
     page.on("pageerror", (err) => console.error("[prerender][pageerror]", err));
 
-    await page.goto(url, { waitUntil: "networkidle0", timeout: 30000 });
+    // English snapshot: the template's canonical/og:url/hreflang already
+    // point at the `en/` URL, so the same captured HTML is correct for both
+    // the root URL (canonicalized to en/) and the en/ URL itself.
+    await page.goto(`http://127.0.0.1:${port}${normalizedBase}en/`, {
+      waitUntil: "networkidle0",
+      timeout: 30000,
+    });
+    await waitForReady(page);
+    const enHtml = await page.content();
+    await writeSnapshot(path.join(distPath, "index.html"), enHtml);
+    await writeSnapshot(path.join(distPath, "en", "index.html"), enHtml);
 
-    // Wait for the i18next-suspended Loader (role="status") to disappear,
-    // i.e. translations have loaded and the real content has mounted.
-    await page.waitForSelector('[role="status"]', { hidden: true, timeout: 30000 });
-    // Extra safety: make sure real heading content is present.
-    await page.waitForFunction(
-      () => {
-        const heading = document.querySelector("h1, h2");
-        return !!heading && heading.textContent.trim().length > 0;
+    // Russian snapshot: needs its own canonical/og:url/og:locale, but must
+    // keep the hreflang="en" alternate link pointing at the en/ URL.
+    await page.goto(`http://127.0.0.1:${port}${normalizedBase}ru/`, {
+      waitUntil: "networkidle0",
+      timeout: 30000,
+    });
+    await waitForReady(page);
+    await page.evaluate(
+      (ruUrl) => {
+        document.querySelector('link[rel="canonical"]')?.setAttribute("href", ruUrl);
+        document
+          .querySelector('meta[property="og:url"]')
+          ?.setAttribute("content", ruUrl);
+        document
+          .querySelector('meta[property="og:locale"]')
+          ?.setAttribute("content", "ru_RU");
       },
-      { timeout: 30000 }
+      ruUrl
     );
-
-    const html = await page.content();
-    const indexPath = path.join(distPath, "index.html");
-    await writeFile(indexPath, `<!doctype html>\n${html}`, "utf-8");
-    console.log(`[prerender] Snapshot written to ${indexPath}`);
+    const ruHtml = await page.content();
+    await writeSnapshot(path.join(distPath, "ru", "index.html"), ruHtml);
   } finally {
     await browser.close();
     server.close();
