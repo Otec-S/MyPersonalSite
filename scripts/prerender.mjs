@@ -113,7 +113,14 @@ async function writeSnapshot(destPath, html) {
 async function main() {
   const { server, port } = await startServer(distPath, normalizedBase);
 
-  const browser = await puppeteer.launch({ headless: "new" });
+  // CI runners (GitHub Actions) don't have unprivileged user namespaces, so
+  // Chrome's setuid sandbox fails to initialize there. The runner is a
+  // disposable container rendering only our own bundle, so disabling the
+  // sandbox here is the standard, low-risk fix.
+  const browser = await puppeteer.launch({
+    headless: "new",
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
   try {
     const page = await browser.newPage();
     page.on("pageerror", (err) => console.error("[prerender][pageerror]", err));
