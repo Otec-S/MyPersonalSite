@@ -1,4 +1,8 @@
 @import "./styles/reset.css";
+@import "@fontsource/jetbrains-mono/latin-400.css";
+@import "@fontsource/jetbrains-mono/latin-500.css";
+@import "@fontsource/jetbrains-mono/cyrillic-400.css";
+@import "@fontsource/jetbrains-mono/cyrillic-500.css";
 
 :root {
   --color-font-primary: #e5e7eb;
@@ -9,6 +13,10 @@
   --color-background-secondary: rgba(72, 191, 145, 0.1);
   --color-link-hover: #4fd1c5;
   --color-gradient: rgba(29, 78, 216, 0.15);
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, "Liberation Mono", monospace;
 }
 
 ::selection {
@@ -21,7 +29,7 @@ html {
 }
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: var(--font-sans);
   margin: 0;
   box-sizing: border-box;
   background-color: var(--color-background);

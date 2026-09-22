@@ -49,6 +49,7 @@
 }
 
 .value {
+  font-family: var(--font-mono);
   font-size: clamp(2rem, 3vw, 2.5rem);
   font-weight: 700;
   line-height: 1;

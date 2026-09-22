@@ -31,6 +31,7 @@
   width: 30%;
   color: var(--color-font-secondary);
   margin-top: 0.25rem;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;

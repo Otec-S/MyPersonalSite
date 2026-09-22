@@ -68,8 +68,7 @@
 .item {
   display: flex;
   align-items: center;
-  font-family:
-    ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 0.875rem;
   color: var(--color-font-secondary);
   white-space: nowrap;
