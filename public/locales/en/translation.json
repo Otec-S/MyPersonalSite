@@ -31,6 +31,9 @@
     "certificates_one": "professional certificate",
     "certificates_other": "professional certificates"
   },
+  "techMarquee": {
+    "ariaLabel": "Technology stack"
+  },
   "about": {
     "hiddentitle": "About me",
     "intro": "Full-stack engineer: React and TypeScript on the front end, Node.js, MongoDB, and PostgreSQL on the back end. Five years in product development — educational platforms, marketplace analytics, corporate websites, HoReCa.",

@@ -34,6 +34,9 @@
     "certificates_many": "профессиональных сертификатов",
     "certificates_other": "профессиональных сертификата"
   },
+  "techMarquee": {
+    "ariaLabel": "Стек технологий"
+  },
   "about": {
     "hiddentitle": "Обо мне",
     "intro": "Фуллстек-инженер: React и TypeScript на фронте, Node.js, MongoDB и PostgreSQL на бэке. Пять лет в продуктовой разработке — образовательные платформы, аналитика для маркетплейсов, корпоративные сайты, HoReCa.",
