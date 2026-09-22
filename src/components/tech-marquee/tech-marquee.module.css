@@ -79,6 +79,14 @@
     color: var(--color-font-primary);
   }
 
+  & svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.4rem;
+    flex-shrink: 0;
+    fill: currentColor;
+  }
+
   &::after {
     content: "·";
     margin: 0 1rem;

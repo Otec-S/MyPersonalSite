@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
+import { SiReact, SiTypescript, SiNodedotjs, SiLangchain } from "react-icons/si";
 import styles from "./tech-marquee.module.css";
 
 interface TechItem {
@@ -8,22 +9,14 @@ interface TechItem {
 }
 
 const TECH_ITEMS: TechItem[] = [
-  { name: "React" },
-  { name: "TypeScript" },
-  { name: "Node.js" },
-  { name: "PostgreSQL" },
-  { name: "Prisma" },
-  { name: "Vite" },
-  { name: "Claude API" },
+  { name: "React", icon: <SiReact /> },
+  { name: "TypeScript", icon: <SiTypescript /> },
+  { name: "Node.js", icon: <SiNodedotjs /> },
   { name: "MCP" },
-  { name: "Docker" },
   // EPM-SDAI
-  { name: "Claude Code" },
   { name: "AI Agents & Skills" },
   { name: "Spec-Driven Development" },
-  { name: "Serena MCP" },
-  { name: "Cursor" },
-  { name: "Python" },
+  { name: "LangChain", icon: <SiLangchain /> },
 ];
 
 const TechList: FC<{ hidden?: boolean }> = ({ hidden }) => (
