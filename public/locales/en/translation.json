@@ -28,11 +28,12 @@
     "years": "years in product development",
     "content": "faster content publishing",
     "routine": "less time on routine tasks",
-    "certificates": "professional certificates"
+    "certificates_one": "professional certificate",
+    "certificates_other": "professional certificates"
   },
   "about": {
     "hiddentitle": "About me",
-    "intro": "Full-stack engineer: React and TypeScript on the front end, Node.js, MongoDB, and PostgreSQL on the back end. Four years in product development — educational platforms, marketplace analytics, corporate websites, HoReCa.",
+    "intro": "Full-stack engineer: React and TypeScript on the front end, Node.js, MongoDB, and PostgreSQL on the back end. Five years in product development — educational platforms, marketplace analytics, corporate websites, HoReCa.",
     "epam": "For the past year at EPAM Systems, I've combined development work with the role of AI Champion. I make sure AI tools actually work for the team: setting up AI agent environments for specific projects — MCP servers, rules and context for code assistants — running webinars, and advising on embedding AI into the development lifecycle. Certified by Anthropic, OpenAI, and Microsoft.",
     "start": "I didn't come to IT right away, though I started programming back in a physics-and-math lyceum on a ",
     "ZXSpectrum": "ZX Spectrum",
