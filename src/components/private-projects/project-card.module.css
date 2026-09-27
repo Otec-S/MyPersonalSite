@@ -19,7 +19,7 @@
 
 .card:hover .activeCard {
   background-color: var(--color-surface-card-hover);
-  opacity: 0.2;
+  opacity: var(--card-hover-opacity);
 
   @media (max-width: 767px) {
     background-color: inherit;
@@ -85,7 +85,7 @@
   margin-top: 0.5rem;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #e2e8f0;
+  color: var(--color-link);
   text-decoration: none;
   transition: color 0.3s ease;
 
@@ -112,7 +112,7 @@
   padding-top: 6px;
   padding-bottom: 0.5rem;
   scrollbar-width: thin;
-  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+  scrollbar-color: var(--color-scrollbar) transparent;
 
   &::-webkit-scrollbar {
     height: 0.375rem;
@@ -123,7 +123,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(148, 163, 184, 0.4);
+    background-color: var(--color-scrollbar);
     border-radius: 9999px;
   }
 }
@@ -136,7 +136,7 @@
 .screenshotButton {
   display: block;
   width: min(200px, 60vw);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border: 1px solid var(--color-border-media);
   border-radius: 0.75rem;
   background: none;
   padding: 0;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
     <title>Sergey Grigorash</title>
     <meta
       name="description"
@@ -52,6 +53,8 @@
                 ? "light"
                 : "dark";
           document.documentElement.setAttribute("data-theme", theme);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", theme === "light" ? "#f8fafc" : "#0f172a");
         } catch (e) {
           document.documentElement.setAttribute("data-theme", "dark");
         }

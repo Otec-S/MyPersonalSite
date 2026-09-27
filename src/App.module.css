@@ -23,6 +23,13 @@
   --color-toggle-track: rgba(148, 163, 184, 0.15);
   --color-toggle-track-hover: rgba(148, 163, 184, 0.25);
   --color-glint: rgba(255, 255, 255, 0.55);
+  --card-hover-opacity: 0.2;
+  --shadow-tile: none;
+  --color-border-media: rgba(148, 163, 184, 0.2);
+  --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --color-close-hover-bg: rgba(79, 209, 197, 0.2);
+  --color-scrollbar: rgba(148, 163, 184, 0.4);
+  color-scheme: dark;
   --font-sans: system-ui, -apple-system, sans-serif;
   --font-mono:
     "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo,
@@ -31,17 +38,17 @@
 
 :root[data-theme="light"] {
   --color-font-primary: #0f172a;
-  --color-font-secondary: #64748b;
-  --color-font-tertiary: #15803d;
+  --color-font-secondary: #475569;
+  --color-font-tertiary: #047857;
   --color-link: #1e293b;
   --color-background: #f8fafc;
   --color-background-rgba: rgba(248, 250, 252, 0.75);
-  --color-background-secondary: rgba(21, 128, 61, 0.08);
+  --color-background-secondary: rgba(4, 120, 87, 0.08);
   --color-link-hover: #0f766e;
-  --color-gradient: rgba(29, 78, 216, 0.08);
-  --color-surface-tile: #f1f5f9;
-  --color-surface-tile-hover: #e2e8f0;
-  --color-border-tile: rgba(15, 23, 42, 0.08);
+  --color-gradient: rgba(29, 78, 216, 0.12);
+  --color-surface-tile: #ffffff;
+  --color-surface-tile-hover: #f1f5f9;
+  --color-border-tile: rgba(15, 23, 42, 0.1);
   --color-border-tile-hover: rgba(15, 118, 110, 0.35);
   --color-surface-card-hover: #e2e8f0;
   --color-social-icon-hover: #0f172a;
@@ -49,6 +56,13 @@
   --color-toggle-track-hover: rgba(15, 23, 42, 0.14);
   --color-glint: rgba(15, 23, 42, 0.55);
   --glint-border-width: 2px;
+  --card-hover-opacity: 0.6;
+  --shadow-tile: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --color-border-media: rgba(15, 23, 42, 0.12);
+  --shadow-modal: 0 25px 50px -12px rgba(15, 23, 42, 0.18);
+  --color-close-hover-bg: rgba(15, 118, 110, 0.12);
+  --color-scrollbar: rgba(100, 116, 139, 0.45);
+  color-scheme: light;
 }
 
 ::selection {

@@ -20,6 +20,10 @@ const getPreferredTheme = (): Theme => {
 
 const applyTheme = (theme: Theme) => {
   document.documentElement.setAttribute("data-theme", theme);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) {
+    meta.setAttribute("content", theme === "light" ? "#f8fafc" : "#0f172a");
+  }
   try {
     window.localStorage.setItem(STORAGE_KEY, theme);
   } catch {

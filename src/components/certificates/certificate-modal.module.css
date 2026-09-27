@@ -89,7 +89,7 @@
   max-height: 90vh;
   object-fit: contain;
   border-radius: 0.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-modal);
 }
 
 .closeButton {
@@ -112,7 +112,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: rgba(79, 209, 197, 0.2);
+    background-color: var(--color-close-hover-bg);
     color: var(--color-link-hover);
   }
 

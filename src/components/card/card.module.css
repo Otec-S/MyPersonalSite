@@ -19,7 +19,7 @@
 
 .card:hover .activeCard {
   background-color: var(--color-surface-card-hover);
-  opacity: 0.2;
+  opacity: var(--card-hover-opacity);
 
   @media (max-width: 767px) {
     background-color: inherit;

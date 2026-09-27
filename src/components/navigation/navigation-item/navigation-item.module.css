@@ -6,8 +6,7 @@
   &:visited,
   &.active {
     .navigationIcon {
-      border-color: var(--color-background-primary);
-      background-color: var(--color-background-primary);
+      border-color: var(--color-font-primary);
       color: var(--color-font-primary);
       text-decoration: none;
       width: 4rem;
