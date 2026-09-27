@@ -81,6 +81,7 @@
 }
 
 .lngButton {
+  background-color: transparent;
   color: var(--color-font-primary);
   font-size: 0.75rem;
   font-weight: 500;
