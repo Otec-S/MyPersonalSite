@@ -65,6 +65,10 @@ This is the one piece of cross-file logic worth knowing up front — several com
 
 `useSectionVisibility` (`src/components/shared/hooks/`) uses `IntersectionObserver` with `rootMargin: "-50% 0px -50% 0px"` (triggers at viewport center) to return per-section boolean visibility flags, which drive the active nav-item highlighting. `SmoothScroll` (renders `null`, side-effect only) globally intercepts clicks on `a[href^="#"]` and scrolls accounting for `TOP_OFFSET`.
 
+### Light/dark theme
+
+`theme-toggle.tsx` (`src/components/theme-toggle/`) reads/writes a `data-theme` attribute on `document.documentElement` (`"light"` or `"dark"`), persisted to `localStorage` (key `theme`) and falling back to `prefers-color-scheme` on first load. Toggled from a button in `header.tsx`. Theme-dependent styling lives in CSS via `[data-theme="light"]`/`[data-theme="dark"]` selectors, not component logic — new colors should go through CSS custom properties rather than JS branching.
+
 ### Certificates are auto-discovered, not registered
 
 Drop an image into `src/assets/certificates/` (`.png`/`.jpg`/`.jpeg`/`.webp`) and it's picked up automatically via `import.meta.glob` in `certificates.data.ts` — no manual registration. Card titles are derived from the filename (`claude-101.webp` → "Claude 101"). PDFs are not supported. If the folder is empty, the certificates section and its nav entry disappear.
