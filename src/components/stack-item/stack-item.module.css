@@ -24,12 +24,12 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px;
+  padding: var(--glint-border-width, 1px);
   pointer-events: none;
   background: linear-gradient(
     110deg,
     color-mix(in srgb, var(--color-font-tertiary) 30%, transparent) 40%,
-    rgba(255, 255, 255, 0.55) 50%,
+    var(--color-glint) 50%,
     color-mix(in srgb, var(--color-font-tertiary) 30%, transparent) 60%
   );
   background-size: 300% 100%;
