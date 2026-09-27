@@ -8,15 +8,44 @@
   --color-font-primary: #e5e7eb;
   --color-font-secondary: rgb(148 163 184);
   --color-font-tertiary: rgb(72, 191, 145);
+  --color-link: #e2e8f0;
   --color-background: #0f172a;
   --color-background-rgba: rgb(15, 23, 42, 0.75);
   --color-background-secondary: rgba(72, 191, 145, 0.1);
   --color-link-hover: #4fd1c5;
   --color-gradient: rgba(29, 78, 216, 0.15);
+  --color-surface-tile: rgba(30, 41, 59, 0.5);
+  --color-surface-tile-hover: rgba(30, 41, 59, 0.8);
+  --color-border-tile: rgba(148, 163, 184, 0.1);
+  --color-border-tile-hover: rgba(79, 209, 197, 0.4);
+  --color-surface-card-hover: rgb(68, 84, 122);
+  --color-social-icon-hover: #ffffff;
+  --color-toggle-track: rgba(148, 163, 184, 0.15);
+  --color-toggle-track-hover: rgba(148, 163, 184, 0.25);
   --font-sans: system-ui, -apple-system, sans-serif;
   --font-mono:
     "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo,
     Consolas, "Liberation Mono", monospace;
+}
+
+:root[data-theme="light"] {
+  --color-font-primary: #0f172a;
+  --color-font-secondary: #64748b;
+  --color-font-tertiary: #15803d;
+  --color-link: #1e293b;
+  --color-background: #f8fafc;
+  --color-background-rgba: rgba(248, 250, 252, 0.75);
+  --color-background-secondary: rgba(21, 128, 61, 0.08);
+  --color-link-hover: #0f766e;
+  --color-gradient: rgba(29, 78, 216, 0.08);
+  --color-surface-tile: #f1f5f9;
+  --color-surface-tile-hover: #e2e8f0;
+  --color-border-tile: rgba(15, 23, 42, 0.08);
+  --color-border-tile-hover: rgba(15, 118, 110, 0.35);
+  --color-surface-card-hover: #e2e8f0;
+  --color-social-icon-hover: #0f172a;
+  --color-toggle-track: rgba(15, 23, 42, 0.08);
+  --color-toggle-track-hover: rgba(15, 23, 42, 0.14);
 }
 
 ::selection {
@@ -34,6 +63,15 @@ body {
   box-sizing: border-box;
   background-color: var(--color-background);
   color: var(--color-font-primary);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }
 
 .app {

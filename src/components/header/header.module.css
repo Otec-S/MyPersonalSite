@@ -73,8 +73,14 @@
   line-height: 1.25rem;
 }
 
-.lngButton {
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 2rem;
+}
+
+.lngButton {
   background-color: var(--color-bg-secondary);
   color: var(--color-font-primary);
   font-size: 0.75rem;

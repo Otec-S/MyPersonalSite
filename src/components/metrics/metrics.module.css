@@ -15,16 +15,16 @@
 .tile {
   padding: 1.25rem 1.5rem;
   border-radius: 0.5rem;
-  background-color: rgba(30, 41, 59, 0.5);
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  background-color: var(--color-surface-tile);
+  border: 1px solid var(--color-border-tile);
   transition:
     background-color 0.3s ease,
     border-color 0.3s ease;
   animation: fade-up 0.5s ease both;
 
   &:hover {
-    background-color: rgba(30, 41, 59, 0.8);
-    border-color: rgba(79, 209, 197, 0.4);
+    background-color: var(--color-surface-tile-hover);
+    border-color: var(--color-border-tile-hover);
   }
 
   &:nth-child(1) {

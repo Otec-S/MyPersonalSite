@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 
 import Navigation from "@components/navigation/navigation";
 import SocialMedia from "@components/social-media/social-media";
+import ThemeToggle from "@components/theme-toggle/theme-toggle";
 
 import { useTranslation } from "react-i18next";
 
@@ -35,25 +36,28 @@ const Header: FC = () => {
   return (
     <header className={styles.header}>
       <div>
-        <div>
-          {(Object.keys(lngs) as Array<keyof typeof lngs>).map((lng, index) => (
-            <span key={lng}>
-              <button
-                className={
-                  i18n.resolvedLanguage === lng
-                    ? `${styles.lngButton} ${styles.lngButtonActive}`
-                    : `${styles.lngButton}`
-                }
-                type="submit"
-                onClick={() => i18n.changeLanguage(lng)}
-              >
-                {lngs[lng].nativeName}
-              </button>
-              {index < Object.keys(lngs).length - 1 && (
-                <span className={styles.separator}> | </span>
-              )}
-            </span>
-          ))}
+        <div className={styles.topBar}>
+          <div>
+            {(Object.keys(lngs) as Array<keyof typeof lngs>).map((lng, index) => (
+              <span key={lng}>
+                <button
+                  className={
+                    i18n.resolvedLanguage === lng
+                      ? `${styles.lngButton} ${styles.lngButtonActive}`
+                      : `${styles.lngButton}`
+                  }
+                  type="submit"
+                  onClick={() => i18n.changeLanguage(lng)}
+                >
+                  {lngs[lng].nativeName}
+                </button>
+                {index < Object.keys(lngs).length - 1 && (
+                  <span className={styles.separator}> | </span>
+                )}
+              </span>
+            ))}
+          </div>
+          <ThemeToggle />
         </div>
         <h1 className={styles.headerTitle}>
           <a href={link} className={styles.headerTitleLink}>

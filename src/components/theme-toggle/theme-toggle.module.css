@@ -1,0 +1,30 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  background-color: var(--color-toggle-track);
+  color: var(--color-font-secondary);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-toggle-track-hover);
+    color: var(--color-link-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-link-hover);
+    outline-offset: 2px;
+  }
+}
+
+.icon {
+  width: 0.9rem;
+  height: 0.9rem;
+}

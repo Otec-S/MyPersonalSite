@@ -18,7 +18,7 @@
 }
 
 .card:hover .activeCard {
-  background-color: rgb(68, 84, 122);
+  background-color: var(--color-surface-card-hover);
   opacity: 0.2;
 
   @media (max-width: 767px) {
