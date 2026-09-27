@@ -14,4 +14,55 @@
   letter-spacing: -0.01em;
   color: var(--color-font-tertiary);
   width: fit-content;
+  position: relative;
+  isolation: isolate;
+}
+
+/* 1px border drawn via mask so the glint gradient can travel along it */
+.item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  background: linear-gradient(
+    110deg,
+    color-mix(in srgb, var(--color-font-tertiary) 30%, transparent) 40%,
+    rgba(255, 255, 255, 0.55) 50%,
+    color-mix(in srgb, var(--color-font-tertiary) 30%, transparent) 60%
+  );
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+@keyframes glint {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+/* Glint position is tied to the badge's progress through the viewport */
+@supports (animation-timeline: view()) {
+  .item::before {
+    animation: glint linear both;
+    animation-timeline: view();
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item::before {
+    animation: none;
+  }
 }
