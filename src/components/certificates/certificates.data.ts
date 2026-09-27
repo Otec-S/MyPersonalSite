@@ -21,8 +21,11 @@ const formatCertificateTitle = (filePath: string): string => {
 const getFileName = (filePath: string): string =>
   filePath.split("/").pop()?.replace(/\.[^.]+$/, "") ?? filePath;
 
-// Certificates listed here are pinned to the front, in this order; the rest follow alphabetically.
-const pinnedOrder = ["OpenAI-Cyber-Deployment-Practitioner"];
+// Certificates listed here are ordered newest first; any not listed follow alphabetically after them.
+const displayOrder = [
+  "Gemini-Enterprise-Certified-Partner-Specialist",
+  "OpenAI-Cyber-Deployment-Practitioner",
+];
 
 export const certificates: Certificate[] = Object.entries(imageModules)
   .map(([path, url]) => ({
@@ -31,13 +34,13 @@ export const certificates: Certificate[] = Object.entries(imageModules)
     url: url as string,
   }))
   .sort((a, b) => {
-    const aPinned = pinnedOrder.indexOf(a.id);
-    const bPinned = pinnedOrder.indexOf(b.id);
+    const aOrder = displayOrder.indexOf(a.id);
+    const bOrder = displayOrder.indexOf(b.id);
 
-    if (aPinned !== -1 || bPinned !== -1) {
-      if (aPinned === -1) return 1;
-      if (bPinned === -1) return -1;
-      return aPinned - bPinned;
+    if (aOrder !== -1 || bOrder !== -1) {
+      if (aOrder === -1) return 1;
+      if (bOrder === -1) return -1;
+      return aOrder - bOrder;
     }
 
     return a.title.localeCompare(b.title);
