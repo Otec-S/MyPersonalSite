@@ -23,6 +23,7 @@ const getFileName = (filePath: string): string =>
 
 // Certificates listed here are ordered newest first; any not listed follow alphabetically after them.
 const displayOrder = [
+  "Claude-Certified-Developer-Foundations",
   "Gemini-Enterprise-Certified-Partner-Specialist",
   "OpenAI-Cyber-Deployment-Practitioner",
 ];
