@@ -3,36 +3,16 @@ import styles from "./theme-toggle.module.css";
 
 export type Theme = "dark" | "light";
 
-const STORAGE_KEY = "theme";
-
-const getPreferredTheme = (): Theme => {
-  if (typeof document !== "undefined") {
-    const current = document.documentElement.getAttribute("data-theme");
-    if (current === "light" || current === "dark") {
-      return current;
-    }
-  }
-  if (typeof window !== "undefined" && window.matchMedia) {
-    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-  }
-  return "dark";
-};
-
 const applyTheme = (theme: Theme) => {
   document.documentElement.setAttribute("data-theme", theme);
   const meta = document.querySelector('meta[name="theme-color"]');
   if (meta) {
     meta.setAttribute("content", theme === "light" ? "#f8fafc" : "#0f172a");
   }
-  try {
-    window.localStorage.setItem(STORAGE_KEY, theme);
-  } catch {
-    // Ignore write failures (private mode, storage disabled, etc.)
-  }
 };
 
 const ThemeToggle: FC = () => {
-  const [theme, setTheme] = useState<Theme>(getPreferredTheme);
+  const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
     applyTheme(theme);
