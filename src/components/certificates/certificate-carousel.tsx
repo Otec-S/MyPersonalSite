@@ -20,12 +20,21 @@ const CertificateCarousel: FC<CertificateCarouselProps> = ({
           className={styles.item}
           onClick={() => onSelect(certificate)}
         >
-          <img
-            className={styles.imagePreview}
-            src={certificate.url}
-            alt={certificate.title}
-            loading="lazy"
-          />
+          {certificate.isPdf ? (
+            <object
+              className={styles.imagePreview}
+              data={`${certificate.url}#toolbar=0&navpanes=0&view=FitH`}
+              type="application/pdf"
+              aria-label={certificate.title}
+            />
+          ) : (
+            <img
+              className={styles.imagePreview}
+              src={certificate.url}
+              alt={certificate.title}
+              loading="lazy"
+            />
+          )}
         </button>
       ))}
     </div>

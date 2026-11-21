@@ -2,9 +2,10 @@ export interface Certificate {
   id: string;
   title: string;
   url: string;
+  isPdf?: boolean;
 }
 
-const imageModules = import.meta.glob("../../assets/certificates/*.{png,jpg,jpeg,webp}", {
+const imageModules = import.meta.glob("../../assets/certificates/*.{png,jpg,jpeg,webp,pdf}", {
   eager: true,
   query: "?url",
   import: "default",
@@ -33,6 +34,7 @@ export const certificates: Certificate[] = Object.entries(imageModules)
     id: getFileName(path),
     title: formatCertificateTitle(path),
     url: url as string,
+    isPdf: path.toLowerCase().endsWith(".pdf"),
   }))
   .sort((a, b) => {
     const aOrder = displayOrder.indexOf(a.id);

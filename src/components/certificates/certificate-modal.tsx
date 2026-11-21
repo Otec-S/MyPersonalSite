@@ -75,11 +75,24 @@ const CertificateModal: FC<CertificateModalProps> = ({ certificate, onClose }) =
         ×
       </button>
       <div className={styles.content}>
-        <img
-          className={styles.image}
-          src={certificate.url}
-          alt={certificate.title}
-        />
+        {certificate.isPdf ? (
+          <object
+            className={styles.pdf}
+            data={certificate.url}
+            type="application/pdf"
+            aria-label={certificate.title}
+          >
+            <a href={certificate.url} target="_blank" rel="noreferrer noopener">
+              {certificate.title}
+            </a>
+          </object>
+        ) : (
+          <img
+            className={styles.image}
+            src={certificate.url}
+            alt={certificate.title}
+          />
+        )}
       </div>
     </div>
   );
