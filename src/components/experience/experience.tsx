@@ -24,6 +24,10 @@ const Experience: FC = () => {
               <>
                 <p className={styles.text}>{t("experience.epam-intro")}</p>
                 <ul className={styles.bulletList}>
+                  <li>{t("experience.epam-bullet-sdai")}</li>
+                  <li>{t("experience.epam-bullet-rag")}</li>
+                  <li>{t("experience.epam-bullet-ai-tools")}</li>
+                  <li>{t("experience.epam-bullet-webinars")}</li>
                   <li>
                     {t("experience.epam-bullet-cms-start")}
                     <a
@@ -37,16 +41,16 @@ const Experience: FC = () => {
                     </a>
                     {t("experience.epam-bullet-cms-end")}
                   </li>
-                  <li>{t("experience.epam-bullet-rag")}</li>
-                  <li>{t("experience.epam-bullet-ai-tools")}</li>
-                  <li>{t("experience.epam-bullet-webinars")}</li>
                 </ul>
               </>
             }
             stack={[
-              "AI",
+              "Claude Code",
+              "MCP",
+              "CodeMie",
               "TypeScript",
               "React",
+              "Python",
               "Node.js",
               "Next.js",
               "Payload CMS",

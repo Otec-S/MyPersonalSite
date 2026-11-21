@@ -37,7 +37,7 @@
   "about": {
     "hiddentitle": "About me",
     "intro": "Full-stack engineer: React and TypeScript on the front end, Node.js, MongoDB, and PostgreSQL on the back end. Five years in product development — educational platforms, marketplace analytics, corporate websites, HoReCa.",
-    "epam": "For the past year at EPAM Systems, I've combined development work with the role of AI Champion. I make sure AI tools actually work for the team: setting up AI agent environments for specific projects — MCP servers, rules and context for code assistants — running webinars, and advising on embedding AI into the development lifecycle. Certified by Anthropic, OpenAI, and Microsoft.",
+    "epam": "For the past year at EPAM Systems, I've combined development work with the role of AI Champion. I make sure AI tools actually work for the team: setting up AI agent environments for specific projects — MCP servers, rules and context for code assistants — running webinars, and advising on embedding AI into the development lifecycle. I also contribute to EPAM's internal AI Factory program (Claude Code + CodeMie), where I lead a sub-group of developers on the open-source stream. Certified by Anthropic, OpenAI, and Microsoft.",
     "start": "I didn't come to IT right away, though I started programming back in a physics-and-math lyceum on a ",
     "ZXSpectrum": "ZX Spectrum",
     "remember": " — anyone else remember those? :)",
@@ -73,7 +73,8 @@
     "my-RTS-role" : "I’m working on",
     "RTS-platform" : "the multilingual educational platform.",
     "RTS-my-experience" : "Frontend stack: React, TypeScript, Next.js, RTK Query, Less. Maintaining and extending a custom UI Kit built on top of Ant Design. Integrated i18next to support 4 languages. On the backend: NestJS, with video conferencing implemented via WebRTC.",
-    "epam-intro": "Full-stack developer in distributed international teams; concurrently serving as AI Champion for the unit.",
+    "epam-intro": "Full-stack developer and AI Champion in distributed international teams; contributor to EPAM’s AI Factory platform, where I help turn AI-native engineering into a repeatable, measurable delivery practice.",
+    "epam-bullet-sdai": "Contributor to EPAM’s AI-integrated SDLC Factory program (EPM-SDAI), built on Claude Code and the CodeMie AI platform: deliver features and fixes across the React/TypeScript UI and Python backend using a spec-driven, human-in-the-loop workflow (spec → plan → AI-generated code → my review), and review merge requests as a code reviewer. Since Nov 2026, lead a sub-group of developers on the platform’s open-source stream.",
     "epam-bullet-cms-start": "Built a corporate website from scratch on Next.js + Payload CMS with multilingual content \u2014 ",
     "epam-bullet-cms-end": "; cut editors\u2019 content-publishing time by 3x.",
     "epam-bullet-rag": "Developed an internal tool for an industrial client: an AI-assistant interface on top of a RAG service, featuring response streaming, source links with highlighted excerpts, conversation history, and user rating of responses. Separately handled resilience \u2014 request cancellation, retries, and timeout handling for long-running responses. Built an interactive map of the client\u2019s facilities with point clustering, filters, and division cards populated from API data. Integrated with 4 of the client\u2019s services.",
