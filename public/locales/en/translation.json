@@ -21,7 +21,8 @@
     "source": "Source code",
     "screenshots": "Screenshots",
     "calorie-description": "A calorie diary PWA: estimates calories and macros of a meal from a photo or a text description using the Claude API. Entries are stored locally on the device; the app installs on a phone like a native one. A minimal Express proxy keeps the API key on the server. Deployed on a VPS (nginx + PM2) with a site-wide login.",
-    "files-description": "A personal Dropbox-style file service for my family. The NestJS backend issues presigned S3 URLs, so files travel between the browser and S3 directly and are never proxied through the API; PostgreSQL keeps metadata only. JWT auth with refresh-token rotation, per-user storage quotas, i18n, allowlist-only registration."
+    "files-description": "A personal Dropbox-style file service for my family. The NestJS backend issues presigned S3 URLs, so files travel between the browser and S3 directly and are never proxied through the API; PostgreSQL keeps metadata only. JWT auth with refresh-token rotation, per-user storage quotas, i18n, allowlist-only registration.",
+    "digest-description": "An agent that gathers AI-industry news from RSS and search every morning, removes duplicates and sends a short Telegram digest ranked by my own criteria. A two-stage pipeline saves tokens: a cheap model screens items by headline, the main model summarizes only the shortlisted ones. Links are filled in by code, not the model, so hallucinated URLs can't appear. Runs on a VPS under a systemd timer since September 2026, alerts on failure and tracks the cost of every run."
   },
   "metrics": {
     "ariaLabel": "Key metrics",

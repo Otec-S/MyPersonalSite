@@ -9,8 +9,8 @@ export interface Project {
   title: string;
   descriptionKey: string;
   stack: string[];
-  liveUrl: string;
-  repoUrl: string;
+  liveUrl?: string;
+  repoUrl?: string;
   screenshots: ProjectScreenshot[];
 }
 
@@ -50,6 +50,22 @@ Object.entries(imageModules)
   });
 
 export const projects: Project[] = [
+  {
+    id: "ai-digest",
+    title: "AI Digest Agent",
+    descriptionKey: "privateProjects.digest-description",
+    stack: [
+      "TypeScript",
+      "Node.js",
+      "Claude API",
+      "SQLite",
+      "Zod",
+      "Telegram Bot API",
+      "systemd",
+    ],
+    repoUrl: "https://github.com/Otec-S/ai-digest",
+    screenshots: screenshotsByProject.get("ai-digest") ?? [],
+  },
   {
     id: "calorie-tracker",
     title: "AI Calorie Tracker",

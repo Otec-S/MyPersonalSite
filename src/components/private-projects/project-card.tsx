@@ -21,29 +21,35 @@ const ProjectCard: FC<Props> = ({ project }) => {
       <header className={styles.header}>{t("privateProjects.label")}</header>
       <div className={styles.body}>
         <h3 className={styles.title}>
-          <a
-            className={styles.titleLink}
-            href={project.liveUrl}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label={`${project.title} — ${t("privateProjects.live")} (opens in a new tab)`}
-          >
-            {project.title}
-            <span className={styles.arrowLink}>
-              <ArrowLink />
-            </span>
-          </a>
+          {project.liveUrl ? (
+            <a
+              className={styles.titleLink}
+              href={project.liveUrl}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={`${project.title} — ${t("privateProjects.live")} (opens in a new tab)`}
+            >
+              {project.title}
+              <span className={styles.arrowLink}>
+                <ArrowLink />
+              </span>
+            </a>
+          ) : (
+            <span className={styles.titlePlain}>{project.title}</span>
+          )}
         </h3>
         <p className={styles.description}>{t(project.descriptionKey)}</p>
-        <a
-          className={styles.repoLink}
-          href={project.repoUrl}
-          target="_blank"
-          rel="noreferrer noopener"
-          aria-label={`${project.title} — ${t("privateProjects.source")} (opens in a new tab)`}
-        >
-          {t("privateProjects.source")}
-        </a>
+        {project.repoUrl && (
+          <a
+            className={styles.repoLink}
+            href={project.repoUrl}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label={`${project.title} — ${t("privateProjects.source")} (opens in a new tab)`}
+          >
+            {t("privateProjects.source")}
+          </a>
+        )}
         <ul className={styles.stack}>
           {project.stack.map((technology, index) => (
             <li key={index}>

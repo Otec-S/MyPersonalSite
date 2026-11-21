@@ -59,6 +59,10 @@
   margin-top: 0.25rem;
 }
 
+.titlePlain {
+  color: var(--color-font-primary);
+}
+
 .titleLink {
   color: var(--color-font-primary);
   text-decoration: none;
